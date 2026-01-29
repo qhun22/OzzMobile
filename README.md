@@ -1,20 +1,58 @@
-# OzzMobile (QHUN22)
+# QHUN22 Mobile Project Structure
 
-Website bán điện thoại di động sử dụng Python Django.
+## Cấu trúc thư mục
 
-## Mục tiêu
-- Xây dựng website thương mại điện tử bán điện thoại
-- Phục vụ bài tập lớn học phần Web bằng Python
-- Áp dụng đầy đủ CRUD, phân quyền, nghiệp vụ đặt hàng, thống kê
+```
+D:\Py\Ozz\
+├── config/                  # Cấu hình Django
+│   ├── __init__.py
+│   ├── settings.py          # Import settings môi trường
+│   ├── base.py              # Cài đặt chung
+│   ├── local.py             # Cài đặt development
+│   ├── production.py        # Cài đặt production
+│   ├── urls.py              # Root URL config
+│   └── wsgi.py              # WSGI config
+├── apps/                    # Django Apps
+│   ├── core/                # Ứng dụng cốt lõi (utils, mixins, context processors)
+│   ├── accounts/            # Xác thực và quản lý user
+│   ├── products/            # Sản phẩm và danh mục
+│   ├── cart/                # Giỏ hàng
+│   ├── orders/              # Đơn hàng
+│   ├── reviews/             # Đánh giá sản phẩm
+│   ├── promotions/          # Khuyến mãi và coupon
+│   ├── payments/            # Thanh toán
+│   └── home/                # Trang chủ
+├── static/                  # Static files (CSS, JS, images)
+├── templates/               # Django templates
+├── media/                   # User uploaded files
+├── logs/                    # Log files
+├── scripts/                 # Deployment scripts
+├── locale/                  # Translation files
+├── manage.py
+├── requirements.txt
+├── .env.example
+└── README.md
+```
 
-## Công nghệ sử dụng
-- Backend: Python, Django >= 4.2
-- Frontend: HTML, Tailwind CSS, JavaScript
-- Database: SQLite (dev)
-- Image processing: Pillow
-- Version control: Git & GitHub
+## Chạy dự án
 
-## Development Process
-- Project is developed incrementally
-- Each major feature is committed separately
-- Git history reflects real development progress
+```bash
+# Tạo môi trường ảo
+python -m venv venv
+.\venv\Scripts\activate
+
+# Cài đặt dependencies
+pip install -r requirements.txt
+
+# Tạo .env từ .env.example
+copy .env.example .env
+
+# Chạy migrations
+python manage.py migrate
+
+# Tạo superuser
+python manage.py createsuperuser
+
+# Chạy server
+python manage.py runserver
+```

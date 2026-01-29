@@ -1,0 +1,15 @@
+# QHUN22 Mobile - Django E-commerce Website
+# Framework
+Django>=4.2,<5.0
+
+# Database
+psycopg2-binary>=2.9.9  # PostgreSQL driver (production)
+
+# Third-party packages
+django-cleanup>=8.1.0   # Auto-delete uploaded files
+django-storages>=1.14.2  # AWS S3 and other storage backends
+Pillow>=10.2.0          # Image processing
+
+# Optional development tools
+# django-debug-toolbar>=4.2.0  # Debug toolbar (development only)
+
