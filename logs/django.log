@@ -1,0 +1,1662 @@
+INFO 2026-01-30 00:13:38,312 autoreload Watching for file changes with StatReloader
+WARNING 2026-01-30 00:13:48,784 log Not Found: /
+WARNING 2026-01-30 00:13:48,786 log "GET / HTTP/1.1" 404 3385
+WARNING 2026-01-30 00:13:49,308 log Not Found: /
+WARNING 2026-01-30 00:13:49,308 log "GET / HTTP/1.1" 404 3385
+WARNING 2026-01-30 00:13:49,630 log Not Found: /
+WARNING 2026-01-30 00:13:49,630 log "GET / HTTP/1.1" 404 3385
+INFO 2026-01-30 00:13:53,310 log "GET /admin/ HTTP/1.1" 302 0
+INFO 2026-01-30 00:13:53,333 log "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4078
+INFO 2026-01-30 00:13:53,463 log "GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+INFO 2026-01-30 00:13:53,463 log "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO 2026-01-30 00:13:53,477 log "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 3538
+INFO 2026-01-30 00:13:53,477 log "GET /static/admin/css/login.css HTTP/1.1" 200 951
+INFO 2026-01-30 00:13:53,478 log "GET /static/admin/css/base.css HTTP/1.1" 200 23100
+INFO 2026-01-30 00:13:53,478 log "GET /static/admin/css/responsive.css HTTP/1.1" 200 16273
+INFO 2026-01-30 00:13:53,482 log "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2026-01-30 00:14:04,718 autoreload D:\Py\Ozz\apps\products\models\product.py changed, reloading.
+INFO 2026-01-30 00:14:05,104 autoreload Watching for file changes with StatReloader
+WARNING 2026-01-30 00:14:24,779 log Not Found: /
+WARNING 2026-01-30 00:14:24,780 log "GET / HTTP/1.1" 404 3385
+WARNING 2026-01-30 00:17:24,803 log Not Found: /
+WARNING 2026-01-30 00:17:24,804 log "GET / HTTP/1.1" 404 3385
+INFO 2026-01-30 00:17:47,569 autoreload D:\Py\Ozz\apps\home\urls.py changed, reloading.
+INFO 2026-01-30 00:17:47,966 autoreload Watching for file changes with StatReloader
+ERROR 2026-01-30 00:17:54,584 log Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\base.py", line 577, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\apps\home\views.py", line 16, in index
+    return render(request, 'home/index.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\engine.py", line 186, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\base.py", line 157, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\base.py", line 199, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\base.py", line 585, in parse
+    raise self.error(token, e)
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\base.py", line 583, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\loader_tags.py", line 307, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\base.py", line 585, in parse
+    raise self.error(token, e)
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\base.py", line 583, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\loader_tags.py", line 235, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\base.py", line 579, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\base.py", line 634, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Template: D:\Py\Ozz\apps\home\templates\home\index.html, Invalid block tag on line 38: 'static', expected 'endblock'. Did you forget to register or load this tag?
+ERROR 2026-01-30 00:17:54,584 log "GET / HTTP/1.1" 500 170400
+INFO 2026-01-30 00:18:33,430 autoreload D:\Py\Ozz\apps\accounts\urls.py changed, reloading.
+INFO 2026-01-30 00:18:33,812 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 00:20:02,298 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 00:20:29,744 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 00:21:15,655 autoreload D:\Py\Ozz\apps\home\urls.py changed, reloading.
+INFO 2026-01-30 00:21:15,736 autoreload D:\Py\Ozz\apps\accounts\urls.py changed, reloading.
+INFO 2026-01-30 00:21:16,024 autoreload D:\Py\Ozz\apps\home\urls.py changed, reloading.
+INFO 2026-01-30 00:21:16,030 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 00:21:16,109 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 00:21:16,363 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 00:23:30,141 autoreload D:\Py\Ozz\apps\accounts\views\__init__.py changed, reloading.
+INFO 2026-01-30 00:23:30,562 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 00:23:30,816 autoreload D:\Py\Ozz\apps\accounts\views\__init__.py changed, reloading.
+INFO 2026-01-30 00:23:30,937 autoreload D:\Py\Ozz\apps\accounts\views\__init__.py changed, reloading.
+INFO 2026-01-30 00:23:31,308 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 00:23:31,410 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 00:24:41,800 autoreload D:\Py\Ozz\apps\accounts\views\__init__.py changed, reloading.
+INFO 2026-01-30 00:24:41,876 autoreload D:\Py\Ozz\apps\accounts\views\__init__.py changed, reloading.
+INFO 2026-01-30 00:24:42,082 autoreload D:\Py\Ozz\apps\accounts\views\__init__.py changed, reloading.
+INFO 2026-01-30 00:24:42,184 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 00:24:42,285 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 00:24:42,500 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 00:25:03,395 autoreload D:\Py\Ozz\apps\products\views\__init__.py changed, reloading.
+INFO 2026-01-30 00:25:03,475 autoreload D:\Py\Ozz\apps\products\views\__init__.py changed, reloading.
+INFO 2026-01-30 00:25:03,690 autoreload D:\Py\Ozz\apps\products\views\__init__.py changed, reloading.
+INFO 2026-01-30 00:25:03,787 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 00:25:03,870 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 00:25:04,068 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 00:25:04,871 autoreload D:\Py\Ozz\apps\cart\views\__init__.py changed, reloading.
+INFO 2026-01-30 00:25:04,945 autoreload D:\Py\Ozz\apps\cart\views\__init__.py changed, reloading.
+INFO 2026-01-30 00:25:05,154 autoreload D:\Py\Ozz\apps\cart\views\__init__.py changed, reloading.
+INFO 2026-01-30 00:25:05,242 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 00:25:05,358 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 00:25:05,559 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 00:25:06,637 autoreload D:\Py\Ozz\apps\orders\views\__init__.py changed, reloading.
+INFO 2026-01-30 00:25:06,970 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 00:25:07,335 autoreload D:\Py\Ozz\apps\orders\views\__init__.py changed, reloading.
+INFO 2026-01-30 00:25:07,442 autoreload D:\Py\Ozz\apps\orders\views\__init__.py changed, reloading.
+INFO 2026-01-30 00:25:07,716 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 00:25:07,818 autoreload Watching for file changes with StatReloader
+ERROR 2026-01-30 00:26:20,413 log Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\base.py", line 577, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\apps\home\views.py", line 16, in index
+    return render(request, 'home/index.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\engine.py", line 186, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\base.py", line 157, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\base.py", line 199, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\base.py", line 585, in parse
+    raise self.error(token, e)
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\base.py", line 583, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\loader_tags.py", line 307, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\base.py", line 585, in parse
+    raise self.error(token, e)
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\base.py", line 583, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\loader_tags.py", line 235, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\base.py", line 579, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\base.py", line 634, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Template: D:\Py\Ozz\apps\home\templates\home\index.html, Invalid block tag on line 38: 'static', expected 'endblock'. Did you forget to register or load this tag?
+ERROR 2026-01-30 00:26:20,415 log "GET / HTTP/1.1" 500 170400
+ERROR 2026-01-30 00:27:05,569 log Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\base.py", line 577, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\apps\home\views.py", line 16, in index
+    return render(request, 'home/index.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\engine.py", line 186, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\base.py", line 157, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\base.py", line 199, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\base.py", line 585, in parse
+    raise self.error(token, e)
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\base.py", line 583, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\loader_tags.py", line 307, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\base.py", line 585, in parse
+    raise self.error(token, e)
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\base.py", line 583, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\loader_tags.py", line 235, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\base.py", line 579, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\base.py", line 634, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Template: D:\Py\Ozz\apps\home\templates\home\index.html, Invalid block tag on line 38: 'static', expected 'endblock'. Did you forget to register or load this tag?
+ERROR 2026-01-30 00:27:05,575 log "GET / HTTP/1.1" 500 170400
+ERROR 2026-01-30 00:27:45,119 log Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\base.py", line 577, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\apps\home\views.py", line 16, in index
+    return render(request, 'home/index.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\engine.py", line 186, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\base.py", line 157, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\base.py", line 199, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\base.py", line 585, in parse
+    raise self.error(token, e)
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\base.py", line 583, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\loader_tags.py", line 307, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\base.py", line 585, in parse
+    raise self.error(token, e)
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\base.py", line 583, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\loader_tags.py", line 235, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\base.py", line 579, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\base.py", line 634, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Template: D:\Py\Ozz\apps\home\templates\home\index.html, Invalid block tag on line 38: 'static', expected 'endblock'. Did you forget to register or load this tag?
+ERROR 2026-01-30 00:27:45,119 log "GET / HTTP/1.1" 500 170400
+ERROR 2026-01-30 00:27:53,085 log Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\base.py", line 577, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\apps\home\views.py", line 16, in index
+    return render(request, 'home/index.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\engine.py", line 186, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\base.py", line 157, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\base.py", line 199, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\base.py", line 585, in parse
+    raise self.error(token, e)
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\base.py", line 583, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\loader_tags.py", line 307, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\base.py", line 585, in parse
+    raise self.error(token, e)
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\base.py", line 583, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\loader_tags.py", line 235, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\base.py", line 579, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\base.py", line 634, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Template: D:\Py\Ozz\apps\home\templates\home\index.html, Invalid block tag on line 38: 'static', expected 'endblock'. Did you forget to register or load this tag?
+ERROR 2026-01-30 00:27:53,085 log "GET / HTTP/1.1" 500 170400
+INFO 2026-01-30 00:28:15,531 autoreload Watching for file changes with StatReloader
+ERROR 2026-01-30 00:28:20,022 log Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\base.py", line 577, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\apps\home\views.py", line 16, in index
+    return render(request, 'home/index.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\engine.py", line 186, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\base.py", line 157, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\base.py", line 199, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\base.py", line 585, in parse
+    raise self.error(token, e)
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\base.py", line 583, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\loader_tags.py", line 307, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\base.py", line 585, in parse
+    raise self.error(token, e)
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\base.py", line 583, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\loader_tags.py", line 235, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\base.py", line 579, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\base.py", line 634, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Template: D:\Py\Ozz\apps\home\templates\home\index.html, Invalid block tag on line 38: 'static', expected 'endblock'. Did you forget to register or load this tag?
+ERROR 2026-01-30 00:28:20,023 log "GET / HTTP/1.1" 500 170400
+INFO 2026-01-30 00:28:38,738 log "GET / HTTP/1.1" 200 8474
+INFO 2026-01-30 00:28:38,804 log "GET /static/css/components.css HTTP/1.1" 200 49
+INFO 2026-01-30 00:28:38,804 log "GET /static/css/global.css HTTP/1.1" 200 1041
+INFO 2026-01-30 00:28:38,805 log "GET /static/js/global.js HTTP/1.1" 200 2934
+INFO 2026-01-30 00:28:56,304 autoreload D:\Py\Ozz\apps\products\views\product.py changed, reloading.
+INFO 2026-01-30 00:28:56,664 autoreload D:\Py\Ozz\apps\cart\views\cart.py changed, reloading.
+INFO 2026-01-30 00:28:56,729 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 00:28:56,892 autoreload D:\Py\Ozz\apps\orders\views\order.py changed, reloading.
+INFO 2026-01-30 00:28:57,027 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 00:28:57,208 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 00:28:57,210 autoreload D:\Py\Ozz\apps\accounts\views\auth.py changed, reloading.
+INFO 2026-01-30 00:28:57,540 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 00:29:00,350 log "GET / HTTP/1.1" 200 8474
+INFO 2026-01-30 00:29:00,440 log "GET /static/css/components.css HTTP/1.1" 200 49
+INFO 2026-01-30 00:29:00,451 log "GET /static/css/global.css HTTP/1.1" 200 1041
+INFO 2026-01-30 00:29:00,455 log "GET /static/js/global.js HTTP/1.1" 200 2934
+ERROR 2026-01-30 00:29:01,145 log Internal Server Error: /accounts/login/
+Traceback (most recent call last):
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\apps\accounts\views\auth.py", line 23, in login_view
+    return render(request, 'accounts/auth/login.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: accounts/auth/login.html
+ERROR 2026-01-30 00:29:01,146 log "GET /accounts/login/ HTTP/1.1" 500 83871
+INFO 2026-01-30 00:34:22,111 log "GET / HTTP/1.1" 200 10620
+INFO 2026-01-30 00:34:22,119 log "GET /static/css/global.css HTTP/1.1" 304 0
+INFO 2026-01-30 00:34:22,119 log "GET /static/js/global.js HTTP/1.1" 304 0
+INFO 2026-01-30 00:34:22,120 log "GET /static/css/components.css HTTP/1.1" 304 0
+INFO 2026-01-30 00:34:51,344 log "GET / HTTP/1.1" 200 10620
+INFO 2026-01-30 00:34:51,353 log "GET /static/css/global.css HTTP/1.1" 304 0
+INFO 2026-01-30 00:34:51,353 log "GET /static/css/components.css HTTP/1.1" 304 0
+INFO 2026-01-30 00:34:51,353 log "GET /static/js/global.js HTTP/1.1" 304 0
+ERROR 2026-01-30 00:36:23,095 log Internal Server Error: /accounts/login/
+Traceback (most recent call last):
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\apps\accounts\views\auth.py", line 23, in login_view
+    return render(request, 'accounts/auth/login.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: accounts/auth/login.html
+ERROR 2026-01-30 00:36:23,095 log "GET /accounts/login/ HTTP/1.1" 500 83871
+ERROR 2026-01-30 00:36:24,313 log Internal Server Error: /orders/
+Traceback (most recent call last):
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\apps\orders\views\order.py", line 11, in order_list
+    return render(request, 'orders/order/list.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: orders/order/list.html
+ERROR 2026-01-30 00:36:24,313 log "GET /orders/ HTTP/1.1" 500 83646
+INFO 2026-01-30 00:36:25,344 log "GET /cart/ HTTP/1.1" 200 10360
+INFO 2026-01-30 00:36:28,255 log "GET / HTTP/1.1" 200 10620
+INFO 2026-01-30 00:38:05,406 log "GET / HTTP/1.1" 200 9523
+WARNING 2026-01-30 00:38:05,416 log "GET /static/images/logo.png HTTP/1.1" 404 1859
+INFO 2026-01-30 00:38:05,417 log "GET /static/js/global.js HTTP/1.1" 304 0
+INFO 2026-01-30 00:38:05,418 log "GET /static/css/global.css HTTP/1.1" 304 0
+INFO 2026-01-30 00:38:05,419 log "GET /static/css/components.css HTTP/1.1" 304 0
+INFO 2026-01-30 00:39:53,521 log "GET / HTTP/1.1" 200 9523
+INFO 2026-01-30 00:39:53,532 log "GET /static/css/global.css HTTP/1.1" 304 0
+WARNING 2026-01-30 00:39:53,532 log "GET /static/images/logo.png HTTP/1.1" 404 1859
+INFO 2026-01-30 00:39:53,533 log "GET /static/css/components.css HTTP/1.1" 304 0
+INFO 2026-01-30 00:39:53,533 log "GET /static/js/global.js HTTP/1.1" 304 0
+WARNING 2026-01-30 00:39:58,332 log "GET /static/images/logo.png HTTP/1.1" 404 1859
+WARNING 2026-01-30 00:41:00,822 log "GET /static/images/logo.png HTTP/1.1" 404 1859
+INFO 2026-01-30 00:41:05,285 log "GET / HTTP/1.1" 200 9523
+WARNING 2026-01-30 00:41:05,296 log "GET /static/images/logo.png HTTP/1.1" 404 1859
+INFO 2026-01-30 00:41:05,457 log "GET / HTTP/1.1" 200 9523
+WARNING 2026-01-30 00:41:05,483 log "GET /static/images/logo.png HTTP/1.1" 404 1859
+INFO 2026-01-30 00:41:05,652 log "GET / HTTP/1.1" 200 9523
+WARNING 2026-01-30 00:41:05,668 log "GET /static/images/logo.png HTTP/1.1" 404 1859
+INFO 2026-01-30 00:41:05,789 log "GET / HTTP/1.1" 200 9523
+WARNING 2026-01-30 00:41:05,796 log "GET /static/images/logo.png HTTP/1.1" 404 1859
+INFO 2026-01-30 00:41:05,906 log "GET / HTTP/1.1" 200 9523
+WARNING 2026-01-30 00:41:05,920 log "GET /static/images/logo.png HTTP/1.1" 404 1859
+INFO 2026-01-30 00:41:07,365 log "GET / HTTP/1.1" 200 9523
+INFO 2026-01-30 00:41:07,373 log "GET /static/css/components.css HTTP/1.1" 200 49
+INFO 2026-01-30 00:41:07,374 log "GET /static/css/global.css HTTP/1.1" 200 1041
+WARNING 2026-01-30 00:41:07,378 log "GET /static/images/logo.png HTTP/1.1" 404 1859
+INFO 2026-01-30 00:41:07,379 log "GET /static/js/global.js HTTP/1.1" 200 2934
+WARNING 2026-01-30 00:41:07,578 log Not Found: /favicon.ico
+WARNING 2026-01-30 00:41:07,578 log "GET /favicon.ico HTTP/1.1" 404 3683
+INFO 2026-01-30 00:41:58,894 log "GET / HTTP/1.1" 200 9523
+WARNING 2026-01-30 00:41:58,902 log "GET /static/images/logo.png HTTP/1.1" 404 1859
+INFO 2026-01-30 00:43:36,232 log "GET / HTTP/1.1" 200 9523
+WARNING 2026-01-30 00:43:36,250 log "GET /static/images/logo.png HTTP/1.1" 404 1859
+INFO 2026-01-30 00:43:45,966 log "GET / HTTP/1.1" 200 9523
+WARNING 2026-01-30 00:43:45,974 log "GET /static/images/logo.png HTTP/1.1" 404 1859
+INFO 2026-01-30 00:43:46,374 log "GET / HTTP/1.1" 200 9523
+WARNING 2026-01-30 00:43:46,382 log "GET /static/images/logo.png HTTP/1.1" 404 1859
+INFO 2026-01-30 00:43:46,549 log "GET / HTTP/1.1" 200 9523
+WARNING 2026-01-30 00:43:46,549 log "GET /static/images/logo.png HTTP/1.1" 404 1859
+INFO 2026-01-30 00:43:46,666 log "GET / HTTP/1.1" 200 9523
+WARNING 2026-01-30 00:43:46,688 log "GET /static/images/logo.png HTTP/1.1" 404 1859
+INFO 2026-01-30 00:43:49,710 log "GET / HTTP/1.1" 200 9523
+INFO 2026-01-30 00:43:49,721 log "GET /static/css/components.css HTTP/1.1" 200 49
+INFO 2026-01-30 00:43:49,723 log "GET /static/css/global.css HTTP/1.1" 200 1041
+WARNING 2026-01-30 00:43:49,723 log "GET /static/images/logo.png HTTP/1.1" 404 1859
+INFO 2026-01-30 00:43:49,723 log "GET /static/js/global.js HTTP/1.1" 200 2934
+WARNING 2026-01-30 00:43:49,978 log Not Found: /favicon.ico
+WARNING 2026-01-30 00:43:49,978 log "GET /favicon.ico HTTP/1.1" 404 3683
+WARNING 2026-01-30 00:43:52,885 log "GET /static/images/logo.png HTTP/1.1" 404 1859
+INFO 2026-01-30 00:45:16,638 log "GET / HTTP/1.1" 200 9523
+WARNING 2026-01-30 00:45:16,656 log "GET /static/images/logo.png HTTP/1.1" 404 1859
+INFO 2026-01-30 00:45:30,813 log "GET / HTTP/1.1" 200 9523
+INFO 2026-01-30 00:45:30,822 log "GET /static/css/components.css HTTP/1.1" 304 0
+INFO 2026-01-30 00:45:30,822 log "GET /static/css/global.css HTTP/1.1" 304 0
+WARNING 2026-01-30 00:45:30,825 log "GET /static/images/logo.png HTTP/1.1" 404 1859
+INFO 2026-01-30 00:45:30,825 log "GET /static/js/global.js HTTP/1.1" 304 0
+INFO 2026-01-30 00:46:07,557 log "GET / HTTP/1.1" 200 9523
+WARNING 2026-01-30 00:46:07,569 log "GET /static/images/logo.png HTTP/1.1" 404 1859
+INFO 2026-01-30 00:46:07,734 log "GET / HTTP/1.1" 200 9523
+WARNING 2026-01-30 00:46:07,744 log "GET /static/images/logo.png HTTP/1.1" 404 1859
+INFO 2026-01-30 00:46:07,856 log "GET / HTTP/1.1" 200 9523
+WARNING 2026-01-30 00:46:07,871 log "GET /static/images/logo.png HTTP/1.1" 404 1859
+INFO 2026-01-30 00:46:08,035 log "GET / HTTP/1.1" 200 9523
+WARNING 2026-01-30 00:46:08,049 log "GET /static/images/logo.png HTTP/1.1" 404 1859
+WARNING 2026-01-30 00:46:11,869 log "GET /static/images/logo.png HTTP/1.1" 404 1859
+WARNING 2026-01-30 00:46:38,870 log "GET /static/images HTTP/1.1" 404 1869
+INFO 2026-01-30 00:48:12,637 log "GET / HTTP/1.1" 200 9522
+INFO 2026-01-30 00:48:12,656 log "GET /static/css/global.css HTTP/1.1" 304 0
+INFO 2026-01-30 00:48:12,657 log "GET /static/css/components.css HTTP/1.1" 304 0
+INFO 2026-01-30 00:48:12,660 log "GET /static/js/global.js HTTP/1.1" 304 0
+WARNING 2026-01-30 00:48:12,660 log "GET /static/images/logo.png HTTP/1.1" 404 1859
+INFO 2026-01-30 00:48:15,539 log "GET / HTTP/1.1" 200 9522
+WARNING 2026-01-30 00:48:15,548 log "GET /static/images/logo.png HTTP/1.1" 404 1859
+INFO 2026-01-30 00:48:21,398 log "GET / HTTP/1.1" 200 9522
+WARNING 2026-01-30 00:48:21,398 log "GET /static/images/logo.png HTTP/1.1" 404 1859
+WARNING 2026-01-30 00:48:23,685 log "GET /static/images/logo.png HTTP/1.1" 404 1859
+INFO 2026-01-30 00:49:02,520 log "GET / HTTP/1.1" 200 9522
+WARNING 2026-01-30 00:49:02,527 log "GET /static/images/logo.png HTTP/1.1" 404 1859
+INFO 2026-01-30 00:49:40,043 log "GET /static/images/logos/Logooqhun22.gif HTTP/1.1" 200 2870137
+INFO 2026-01-30 00:51:04,378 log "GET / HTTP/1.1" 200 9522
+WARNING 2026-01-30 00:51:04,389 log "GET /static/images/logo.png HTTP/1.1" 404 1859
+INFO 2026-01-30 00:51:05,008 log "GET / HTTP/1.1" 200 9522
+WARNING 2026-01-30 00:51:05,018 log "GET /static/images/logo.png HTTP/1.1" 404 1859
+INFO 2026-01-30 00:51:05,191 log "GET / HTTP/1.1" 200 9522
+WARNING 2026-01-30 00:51:05,202 log "GET /static/images/logo.png HTTP/1.1" 404 1859
+INFO 2026-01-30 00:51:05,334 log "GET / HTTP/1.1" 200 9522
+WARNING 2026-01-30 00:51:05,346 log "GET /static/images/logo.png HTTP/1.1" 404 1859
+INFO 2026-01-30 00:51:06,542 log "GET / HTTP/1.1" 200 9522
+INFO 2026-01-30 00:51:06,553 log "GET /static/css/global.css HTTP/1.1" 200 1041
+INFO 2026-01-30 00:51:06,554 log "GET /static/css/components.css HTTP/1.1" 200 49
+WARNING 2026-01-30 00:51:06,558 log "GET /static/images/logo.png HTTP/1.1" 404 1859
+INFO 2026-01-30 00:51:06,558 log "GET /static/js/global.js HTTP/1.1" 200 2934
+WARNING 2026-01-30 00:51:06,788 log Not Found: /favicon.ico
+WARNING 2026-01-30 00:51:06,788 log "GET /favicon.ico HTTP/1.1" 404 3683
+INFO 2026-01-30 00:51:16,239 log "GET / HTTP/1.1" 200 9522
+INFO 2026-01-30 00:51:16,248 log "GET /static/css/global.css HTTP/1.1" 200 1041
+WARNING 2026-01-30 00:51:16,251 log "GET /static/images/logo.png HTTP/1.1" 404 1859
+INFO 2026-01-30 00:51:16,251 log "GET /static/css/components.css HTTP/1.1" 200 49
+INFO 2026-01-30 00:51:16,252 log "GET /static/js/global.js HTTP/1.1" 200 2934
+INFO 2026-01-30 00:52:40,855 log "GET / HTTP/1.1" 200 9535
+INFO 2026-01-30 00:53:13,760 log "GET / HTTP/1.1" 200 9535
+INFO 2026-01-30 00:53:13,780 log "GET /static/images/logos/Logooqhun22.gif HTTP/1.1" 200 2870137
+INFO 2026-01-30 00:56:54,237 log "GET / HTTP/1.1" 200 10589
+INFO 2026-01-30 00:56:54,246 log "GET /static/css/components.css HTTP/1.1" 304 0
+INFO 2026-01-30 00:56:54,246 log "GET /static/css/global.css HTTP/1.1" 304 0
+INFO 2026-01-30 00:56:54,246 log "GET /static/js/global.js HTTP/1.1" 304 0
+INFO 2026-01-30 00:57:02,929 log "GET / HTTP/1.1" 200 10589
+INFO 2026-01-30 00:57:02,944 log "GET /static/css/components.css HTTP/1.1" 304 0
+INFO 2026-01-30 00:57:02,945 log "GET /static/css/global.css HTTP/1.1" 304 0
+INFO 2026-01-30 00:57:02,945 log "GET /static/js/global.js HTTP/1.1" 304 0
+INFO 2026-01-30 00:57:04,303 log "GET / HTTP/1.1" 200 10589
+INFO 2026-01-30 00:58:47,991 log "GET / HTTP/1.1" 200 11581
+INFO 2026-01-30 00:59:03,128 log "GET / HTTP/1.1" 200 11581
+INFO 2026-01-30 01:01:48,068 log "GET / HTTP/1.1" 200 12105
+INFO 2026-01-30 01:01:49,528 log "GET / HTTP/1.1" 200 12105
+INFO 2026-01-30 01:01:51,080 log "GET / HTTP/1.1" 200 12105
+INFO 2026-01-30 01:02:00,487 log "GET / HTTP/1.1" 200 12105
+INFO 2026-01-30 01:02:00,493 log "GET /static/css/global.css HTTP/1.1" 304 0
+INFO 2026-01-30 01:02:00,496 log "GET /static/js/global.js HTTP/1.1" 304 0
+INFO 2026-01-30 01:02:00,496 log "GET /static/css/components.css HTTP/1.1" 304 0
+INFO 2026-01-30 01:02:20,762 log "GET / HTTP/1.1" 200 12105
+INFO 2026-01-30 01:02:20,772 log "GET /static/css/global.css HTTP/1.1" 304 0
+INFO 2026-01-30 01:02:20,772 log "GET /static/css/components.css HTTP/1.1" 304 0
+INFO 2026-01-30 01:02:20,772 log "GET /static/js/global.js HTTP/1.1" 304 0
+INFO 2026-01-30 01:02:21,160 log "GET / HTTP/1.1" 200 12105
+INFO 2026-01-30 01:02:22,335 log "GET / HTTP/1.1" 200 12105
+INFO 2026-01-30 01:02:22,344 log "GET /static/css/global.css HTTP/1.1" 200 1041
+INFO 2026-01-30 01:02:22,345 log "GET /static/css/components.css HTTP/1.1" 200 49
+INFO 2026-01-30 01:02:22,351 log "GET /static/js/global.js HTTP/1.1" 200 2934
+INFO 2026-01-30 01:02:22,365 log "GET /static/images/logos/Logooqhun22.gif HTTP/1.1" 200 2870137
+WARNING 2026-01-30 01:02:22,608 log Not Found: /favicon.ico
+WARNING 2026-01-30 01:02:22,608 log "GET /favicon.ico HTTP/1.1" 404 3683
+INFO 2026-01-30 01:05:17,808 log "GET / HTTP/1.1" 200 11581
+INFO 2026-01-30 01:05:18,775 log "GET / HTTP/1.1" 200 11581
+INFO 2026-01-30 01:10:26,227 log "GET / HTTP/1.1" 200 15676
+INFO 2026-01-30 01:10:26,234 log "GET /static/css/components.css HTTP/1.1" 304 0
+INFO 2026-01-30 01:10:26,234 log "GET /static/css/global.css HTTP/1.1" 304 0
+INFO 2026-01-30 01:10:26,234 log "GET /static/js/global.js HTTP/1.1" 304 0
+INFO 2026-01-30 01:11:24,943 log "GET / HTTP/1.1" 200 15676
+INFO 2026-01-30 01:11:25,823 log "GET / HTTP/1.1" 200 15676
+ERROR 2026-01-30 01:13:57,046 log Internal Server Error: /orders/
+Traceback (most recent call last):
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\apps\orders\views\order.py", line 11, in order_list
+    return render(request, 'orders/order/list.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: orders/order/list.html
+ERROR 2026-01-30 01:13:57,047 log "GET /orders/ HTTP/1.1" 500 83646
+INFO 2026-01-30 01:13:58,178 log "GET /cart/ HTTP/1.1" 200 11321
+INFO 2026-01-30 01:14:00,233 log "GET / HTTP/1.1" 200 15676
+ERROR 2026-01-30 01:14:01,324 log Internal Server Error: /accounts/login/
+Traceback (most recent call last):
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\apps\accounts\views\auth.py", line 23, in login_view
+    return render(request, 'accounts/auth/login.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: accounts/auth/login.html
+ERROR 2026-01-30 01:14:01,325 log "GET /accounts/login/ HTTP/1.1" 500 83871
+INFO 2026-01-30 01:14:46,071 log "GET / HTTP/1.1" 200 18861
+INFO 2026-01-30 01:16:09,811 log "GET / HTTP/1.1" 200 18861
+INFO 2026-01-30 01:16:10,238 log "GET / HTTP/1.1" 200 18861
+INFO 2026-01-30 01:16:27,529 log "GET / HTTP/1.1" 200 18861
+INFO 2026-01-30 01:17:38,967 log "GET / HTTP/1.1" 200 18895
+INFO 2026-01-30 01:17:38,994 log "GET /static/css/global.css HTTP/1.1" 304 0
+INFO 2026-01-30 01:17:38,994 log "GET /static/css/components.css HTTP/1.1" 304 0
+INFO 2026-01-30 01:17:38,995 log "GET /static/js/global.js HTTP/1.1" 304 0
+INFO 2026-01-30 01:18:32,231 log "GET / HTTP/1.1" 200 20513
+INFO 2026-01-30 01:18:32,719 log "GET / HTTP/1.1" 200 20513
+WARNING 2026-01-30 01:23:35,541 log Not Found: /profile/
+WARNING 2026-01-30 01:23:35,541 log "GET /profile/ HTTP/1.1" 404 3674
+INFO 2026-01-30 01:25:42,219 log "GET / HTTP/1.1" 200 24350
+INFO 2026-01-30 01:25:42,222 log "GET /static/css/global.css HTTP/1.1" 304 0
+INFO 2026-01-30 01:25:42,222 log "GET /static/css/components.css HTTP/1.1" 304 0
+INFO 2026-01-30 01:25:42,242 log "GET /static/js/global.js HTTP/1.1" 304 0
+INFO 2026-01-30 01:28:06,748 log "GET / HTTP/1.1" 200 18267
+INFO 2026-01-30 01:28:24,428 log "GET / HTTP/1.1" 200 18394
+INFO 2026-01-30 01:28:24,442 log "GET /static/css/banner-slider.css HTTP/1.1" 200 650
+INFO 2026-01-30 01:28:24,466 log "GET /static/js/banner-slider.js HTTP/1.1" 200 5924
+INFO 2026-01-30 01:28:27,687 log "GET / HTTP/1.1" 200 18394
+INFO 2026-01-30 01:28:27,702 log "GET /static/css/global.css HTTP/1.1" 304 0
+INFO 2026-01-30 01:28:27,714 log "GET /static/css/banner-slider.css HTTP/1.1" 200 650
+INFO 2026-01-30 01:28:27,722 log "GET /static/css/components.css HTTP/1.1" 304 0
+WARNING 2026-01-30 01:28:27,723 log "GET /static/images/H2_614x212_308d97e5f4.webp HTTP/1.1" 404 1913
+WARNING 2026-01-30 01:28:27,727 log "GET /static/images/872375.png HTTP/1.1" 404 1865
+WARNING 2026-01-30 01:28:27,745 log "GET /static/images/572723.png HTTP/1.1" 404 1865
+WARNING 2026-01-30 01:28:27,745 log "GET /static/images/H2_614x212_d46b00f4cd.jpg HTTP/1.1" 404 1910
+INFO 2026-01-30 01:28:27,791 log "GET /static/js/global.js HTTP/1.1" 304 0
+INFO 2026-01-30 01:28:27,791 log "GET /static/js/banner-slider.js HTTP/1.1" 200 5924
+WARNING 2026-01-30 01:28:27,856 log "GET /static/images/H2_614x212_308d97e5f4.webp HTTP/1.1" 404 1913
+WARNING 2026-01-30 01:28:27,856 log "GET /static/images/872375.png HTTP/1.1" 404 1865
+WARNING 2026-01-30 01:28:27,916 log "GET /static/videos/applestuff3.mp4 HTTP/1.1" 404 1880
+WARNING 2026-01-30 01:28:27,917 log "GET /static/videos/kv_exclusive_noText_PC.mp4 HTTP/1.1" 404 1913
+WARNING 2026-01-30 01:28:27,920 log "GET /static/videos/raidenei26th06.mp4 HTTP/1.1" 404 1889
+WARNING 2026-01-30 01:28:27,920 log "GET /static/videos/pc_ksp_5s.mp4 HTTP/1.1" 404 1874
+INFO 2026-01-30 01:28:33,352 log "GET / HTTP/1.1" 200 18394
+INFO 2026-01-30 01:28:33,372 log "GET /static/js/banner-slider.js HTTP/1.1" 304 0
+INFO 2026-01-30 01:28:33,372 log "GET /static/css/banner-slider.css HTTP/1.1" 304 0
+INFO 2026-01-30 01:28:43,847 log "GET / HTTP/1.1" 200 18394
+INFO 2026-01-30 01:28:43,858 log "GET /static/js/banner-slider.js HTTP/1.1" 304 0
+INFO 2026-01-30 01:28:43,859 log "GET /static/css/banner-slider.css HTTP/1.1" 304 0
+INFO 2026-01-30 01:28:45,411 log "GET / HTTP/1.1" 200 18394
+INFO 2026-01-30 01:28:45,424 log "GET /static/css/components.css HTTP/1.1" 200 49
+INFO 2026-01-30 01:28:45,424 log "GET /static/css/global.css HTTP/1.1" 200 1041
+WARNING 2026-01-30 01:28:45,433 log "GET /static/images/H2_614x212_308d97e5f4.webp HTTP/1.1" 404 1913
+INFO 2026-01-30 01:28:45,434 log "GET /static/css/banner-slider.css HTTP/1.1" 200 650
+WARNING 2026-01-30 01:28:45,447 log "GET /static/images/872375.png HTTP/1.1" 404 1865
+WARNING 2026-01-30 01:28:45,453 log "GET /static/images/H2_614x212_d46b00f4cd.jpg HTTP/1.1" 404 1910
+WARNING 2026-01-30 01:28:45,458 log "GET /static/images/572723.png HTTP/1.1" 404 1865
+INFO 2026-01-30 01:28:45,461 log "GET /static/js/global.js HTTP/1.1" 200 2934
+INFO 2026-01-30 01:28:45,470 log "GET /static/images/logos/Logooqhun22.gif HTTP/1.1" 200 2870137
+INFO 2026-01-30 01:28:45,515 log "GET /static/js/banner-slider.js HTTP/1.1" 200 5924
+WARNING 2026-01-30 01:28:45,658 log "GET /static/images/872375.png HTTP/1.1" 404 1865
+WARNING 2026-01-30 01:28:45,659 log "GET /static/images/H2_614x212_308d97e5f4.webp HTTP/1.1" 404 1913
+WARNING 2026-01-30 01:28:46,059 log Not Found: /favicon.ico
+WARNING 2026-01-30 01:28:46,060 log "GET /favicon.ico HTTP/1.1" 404 3683
+INFO 2026-01-30 01:30:23,380 log "GET / HTTP/1.1" 200 18394
+INFO 2026-01-30 01:30:23,387 log "GET /static/css/banner-slider.css HTTP/1.1" 304 0
+WARNING 2026-01-30 01:30:23,396 log "GET /static/images/H2_614x212_308d97e5f4.webp HTTP/1.1" 404 1913
+WARNING 2026-01-30 01:30:23,404 log "GET /static/images/872375.png HTTP/1.1" 404 1865
+WARNING 2026-01-30 01:30:23,410 log "GET /static/images/H2_614x212_d46b00f4cd.jpg HTTP/1.1" 404 1910
+WARNING 2026-01-30 01:30:23,415 log "GET /static/images/572723.png HTTP/1.1" 404 1865
+INFO 2026-01-30 01:30:23,439 log "GET /static/js/banner-slider.js HTTP/1.1" 304 0
+WARNING 2026-01-30 01:30:23,451 log "GET /static/images/872375.png HTTP/1.1" 404 1865
+WARNING 2026-01-30 01:30:23,451 log "GET /static/images/H2_614x212_308d97e5f4.webp HTTP/1.1" 404 1913
+INFO 2026-01-30 01:30:25,053 log "GET / HTTP/1.1" 200 18394
+INFO 2026-01-30 01:30:25,067 log "GET /static/css/global.css HTTP/1.1" 200 1041
+INFO 2026-01-30 01:30:25,067 log "GET /static/css/components.css HTTP/1.1" 200 49
+INFO 2026-01-30 01:30:25,067 log "GET /static/css/banner-slider.css HTTP/1.1" 200 650
+WARNING 2026-01-30 01:30:25,081 log "GET /static/images/H2_614x212_308d97e5f4.webp HTTP/1.1" 404 1913
+WARNING 2026-01-30 01:30:25,089 log "GET /static/images/872375.png HTTP/1.1" 404 1865
+WARNING 2026-01-30 01:30:25,094 log "GET /static/images/H2_614x212_d46b00f4cd.jpg HTTP/1.1" 404 1910
+WARNING 2026-01-30 01:30:25,099 log "GET /static/images/572723.png HTTP/1.1" 404 1865
+INFO 2026-01-30 01:30:25,102 log "GET /static/js/global.js HTTP/1.1" 200 2934
+INFO 2026-01-30 01:30:25,112 log "GET /static/images/logos/Logooqhun22.gif HTTP/1.1" 200 2870137
+INFO 2026-01-30 01:30:25,201 log "GET / HTTP/1.1" 200 18394
+INFO 2026-01-30 01:30:25,210 log "GET /static/css/components.css HTTP/1.1" 200 49
+INFO 2026-01-30 01:30:25,211 log "GET /static/css/global.css HTTP/1.1" 200 1041
+INFO 2026-01-30 01:30:25,217 log "GET /static/css/banner-slider.css HTTP/1.1" 200 650
+WARNING 2026-01-30 01:30:25,221 log "GET /static/images/H2_614x212_308d97e5f4.webp HTTP/1.1" 404 1913
+WARNING 2026-01-30 01:30:25,225 log "GET /static/images/872375.png HTTP/1.1" 404 1865
+WARNING 2026-01-30 01:30:25,233 log "GET /static/images/H2_614x212_d46b00f4cd.jpg HTTP/1.1" 404 1910
+WARNING 2026-01-30 01:30:25,238 log "GET /static/images/572723.png HTTP/1.1" 404 1865
+INFO 2026-01-30 01:30:25,242 log "GET /static/js/global.js HTTP/1.1" 200 2934
+INFO 2026-01-30 01:30:25,247 log "GET /static/images/logos/Logooqhun22.gif HTTP/1.1" 200 2870137
+INFO 2026-01-30 01:30:25,305 log "GET /static/js/banner-slider.js HTTP/1.1" 200 5924
+INFO 2026-01-30 01:30:25,341 log "GET / HTTP/1.1" 200 18394
+INFO 2026-01-30 01:30:25,350 log "GET /static/css/components.css HTTP/1.1" 200 49
+INFO 2026-01-30 01:30:25,352 log "GET /static/css/global.css HTTP/1.1" 200 1041
+INFO 2026-01-30 01:30:25,357 log "GET /static/css/banner-slider.css HTTP/1.1" 200 650
+WARNING 2026-01-30 01:30:25,359 log "GET /static/images/H2_614x212_308d97e5f4.webp HTTP/1.1" 404 1913
+WARNING 2026-01-30 01:30:25,368 log "GET /static/images/872375.png HTTP/1.1" 404 1865
+WARNING 2026-01-30 01:30:25,373 log "GET /static/images/H2_614x212_d46b00f4cd.jpg HTTP/1.1" 404 1910
+WARNING 2026-01-30 01:30:25,377 log "GET /static/images/572723.png HTTP/1.1" 404 1865
+INFO 2026-01-30 01:30:25,379 log "GET /static/js/global.js HTTP/1.1" 200 2934
+INFO 2026-01-30 01:30:25,388 log "GET /static/images/logos/Logooqhun22.gif HTTP/1.1" 200 2870137
+INFO 2026-01-30 01:30:25,398 log "GET /static/js/banner-slider.js HTTP/1.1" 200 5924
+INFO 2026-01-30 01:30:25,477 log "GET / HTTP/1.1" 200 18394
+INFO 2026-01-30 01:30:25,486 log "GET /static/css/global.css HTTP/1.1" 200 1041
+INFO 2026-01-30 01:30:25,487 log "GET /static/css/components.css HTTP/1.1" 200 49
+INFO 2026-01-30 01:30:25,492 log "GET /static/css/banner-slider.css HTTP/1.1" 200 650
+WARNING 2026-01-30 01:30:25,492 log "GET /static/images/H2_614x212_308d97e5f4.webp HTTP/1.1" 404 1913
+WARNING 2026-01-30 01:30:25,498 log "GET /static/images/872375.png HTTP/1.1" 404 1865
+WARNING 2026-01-30 01:30:25,503 log "GET /static/images/H2_614x212_d46b00f4cd.jpg HTTP/1.1" 404 1910
+WARNING 2026-01-30 01:30:25,508 log "GET /static/images/572723.png HTTP/1.1" 404 1865
+INFO 2026-01-30 01:30:25,510 log "GET /static/js/global.js HTTP/1.1" 200 2934
+INFO 2026-01-30 01:30:25,519 log "GET /static/images/logos/Logooqhun22.gif HTTP/1.1" 200 2870137
+INFO 2026-01-30 01:30:25,534 log "GET /static/js/banner-slider.js HTTP/1.1" 200 5924
+INFO 2026-01-30 01:30:25,598 log "GET / HTTP/1.1" 200 18394
+INFO 2026-01-30 01:30:25,606 log "GET /static/css/components.css HTTP/1.1" 200 49
+INFO 2026-01-30 01:30:25,609 log "GET /static/css/banner-slider.css HTTP/1.1" 200 650
+INFO 2026-01-30 01:30:25,609 log "GET /static/css/global.css HTTP/1.1" 200 1041
+WARNING 2026-01-30 01:30:25,613 log "GET /static/images/H2_614x212_308d97e5f4.webp HTTP/1.1" 404 1913
+WARNING 2026-01-30 01:30:25,622 log "GET /static/images/872375.png HTTP/1.1" 404 1865
+WARNING 2026-01-30 01:30:25,626 log "GET /static/images/H2_614x212_d46b00f4cd.jpg HTTP/1.1" 404 1910
+WARNING 2026-01-30 01:30:25,632 log "GET /static/images/572723.png HTTP/1.1" 404 1865
+INFO 2026-01-30 01:30:25,634 log "GET /static/js/global.js HTTP/1.1" 200 2934
+INFO 2026-01-30 01:30:25,642 log "GET /static/images/logos/Logooqhun22.gif HTTP/1.1" 200 2870137
+INFO 2026-01-30 01:30:25,655 log "GET /static/js/banner-slider.js HTTP/1.1" 200 5924
+INFO 2026-01-30 01:30:25,724 log "GET / HTTP/1.1" 200 18394
+INFO 2026-01-30 01:30:25,732 log "GET /static/css/components.css HTTP/1.1" 200 49
+INFO 2026-01-30 01:30:25,735 log "GET /static/css/global.css HTTP/1.1" 200 1041
+INFO 2026-01-30 01:30:25,743 log "GET /static/css/banner-slider.css HTTP/1.1" 200 650
+WARNING 2026-01-30 01:30:25,745 log "GET /static/images/H2_614x212_308d97e5f4.webp HTTP/1.1" 404 1913
+WARNING 2026-01-30 01:30:25,754 log "GET /static/images/872375.png HTTP/1.1" 404 1865
+WARNING 2026-01-30 01:30:25,760 log "GET /static/images/H2_614x212_d46b00f4cd.jpg HTTP/1.1" 404 1910
+WARNING 2026-01-30 01:30:25,765 log "GET /static/images/572723.png HTTP/1.1" 404 1865
+INFO 2026-01-30 01:30:25,768 log "GET /static/js/global.js HTTP/1.1" 200 2934
+INFO 2026-01-30 01:30:25,772 log "GET /static/images/logos/Logooqhun22.gif HTTP/1.1" 200 2870137
+INFO 2026-01-30 01:30:25,786 log "GET /static/js/banner-slider.js HTTP/1.1" 200 5924
+INFO 2026-01-30 01:30:25,834 log "GET / HTTP/1.1" 200 18394
+INFO 2026-01-30 01:30:25,844 log "GET /static/css/components.css HTTP/1.1" 200 49
+INFO 2026-01-30 01:30:25,847 log "GET /static/css/global.css HTTP/1.1" 200 1041
+INFO 2026-01-30 01:30:25,851 log "GET /static/css/banner-slider.css HTTP/1.1" 200 650
+WARNING 2026-01-30 01:30:25,852 log "GET /static/images/H2_614x212_308d97e5f4.webp HTTP/1.1" 404 1913
+WARNING 2026-01-30 01:30:25,856 log "GET /static/images/872375.png HTTP/1.1" 404 1865
+WARNING 2026-01-30 01:30:25,861 log "GET /static/images/H2_614x212_d46b00f4cd.jpg HTTP/1.1" 404 1910
+WARNING 2026-01-30 01:30:25,867 log "GET /static/images/572723.png HTTP/1.1" 404 1865
+INFO 2026-01-30 01:30:25,869 log "GET /static/js/global.js HTTP/1.1" 200 2934
+INFO 2026-01-30 01:30:25,882 log "GET /static/images/logos/Logooqhun22.gif HTTP/1.1" 200 2870137
+INFO 2026-01-30 01:30:25,894 log "GET /static/js/banner-slider.js HTTP/1.1" 200 5924
+WARNING 2026-01-30 01:30:26,396 log "GET /static/images/H2_614x212_308d97e5f4.webp HTTP/1.1" 404 1913
+WARNING 2026-01-30 01:30:26,397 log "GET /static/images/872375.png HTTP/1.1" 404 1865
+WARNING 2026-01-30 01:30:26,767 log Not Found: /favicon.ico
+WARNING 2026-01-30 01:30:26,768 log "GET /favicon.ico HTTP/1.1" 404 3683
+INFO 2026-01-30 01:31:48,456 log "GET / HTTP/1.1" 200 18394
+INFO 2026-01-30 01:31:48,459 log "GET /static/css/banner-slider.css HTTP/1.1" 304 0
+WARNING 2026-01-30 01:31:48,459 log "GET /static/images/H2_614x212_308d97e5f4.webp HTTP/1.1" 404 1913
+WARNING 2026-01-30 01:31:48,481 log "GET /static/images/872375.png HTTP/1.1" 404 1865
+WARNING 2026-01-30 01:31:48,481 log "GET /static/images/H2_614x212_d46b00f4cd.jpg HTTP/1.1" 404 1910
+INFO 2026-01-30 01:31:48,488 log "GET /static/js/banner-slider.js HTTP/1.1" 304 0
+WARNING 2026-01-30 01:31:48,489 log "GET /static/images/572723.png HTTP/1.1" 404 1865
+WARNING 2026-01-30 01:31:48,493 log "GET /static/images/H2_614x212_308d97e5f4.webp HTTP/1.1" 404 1913
+INFO 2026-01-30 01:31:59,104 log "GET / HTTP/1.1" 200 18394
+WARNING 2026-01-30 01:31:59,122 log "GET /static/images/H2_614x212_308d97e5f4.webp HTTP/1.1" 404 1913
+WARNING 2026-01-30 01:31:59,133 log "GET /static/images/872375.png HTTP/1.1" 404 1865
+WARNING 2026-01-30 01:31:59,133 log "GET /static/images/H2_614x212_d46b00f4cd.jpg HTTP/1.1" 404 1910
+WARNING 2026-01-30 01:31:59,142 log "GET /static/images/572723.png HTTP/1.1" 404 1865
+WARNING 2026-01-30 01:31:59,151 log "GET /static/images/872375.png HTTP/1.1" 404 1865
+WARNING 2026-01-30 01:31:59,151 log "GET /static/images/H2_614x212_308d97e5f4.webp HTTP/1.1" 404 1913
+INFO 2026-01-30 01:32:17,729 log "GET / HTTP/1.1" 200 18394
+INFO 2026-01-30 01:32:17,740 log "GET /static/css/banner-slider.css HTTP/1.1" 304 0
+WARNING 2026-01-30 01:32:17,752 log "GET /static/images/H2_614x212_308d97e5f4.webp HTTP/1.1" 404 1913
+WARNING 2026-01-30 01:32:17,754 log "GET /static/images/872375.png HTTP/1.1" 404 1865
+INFO 2026-01-30 01:32:17,763 log "GET /static/js/banner-slider.js HTTP/1.1" 304 0
+WARNING 2026-01-30 01:32:17,764 log "GET /static/images/572723.png HTTP/1.1" 404 1865
+WARNING 2026-01-30 01:32:17,764 log "GET /static/images/H2_614x212_d46b00f4cd.jpg HTTP/1.1" 404 1910
+WARNING 2026-01-30 01:32:17,789 log "GET /static/images/872375.png HTTP/1.1" 404 1865
+WARNING 2026-01-30 01:32:17,789 log "GET /static/images/H2_614x212_308d97e5f4.webp HTTP/1.1" 404 1913
+INFO 2026-01-30 01:32:29,953 log "GET / HTTP/1.1" 200 18394
+WARNING 2026-01-30 01:32:29,972 log "GET /static/images/H2_614x212_308d97e5f4.webp HTTP/1.1" 404 1913
+WARNING 2026-01-30 01:32:29,979 log "GET /static/images/872375.png HTTP/1.1" 404 1865
+WARNING 2026-01-30 01:32:29,985 log "GET /static/images/H2_614x212_d46b00f4cd.jpg HTTP/1.1" 404 1910
+WARNING 2026-01-30 01:32:29,993 log "GET /static/images/572723.png HTTP/1.1" 404 1865
+WARNING 2026-01-30 01:32:30,007 log "GET /static/images/872375.png HTTP/1.1" 404 1865
+WARNING 2026-01-30 01:32:30,007 log "GET /static/images/H2_614x212_308d97e5f4.webp HTTP/1.1" 404 1913
+INFO 2026-01-30 01:34:06,752 log "GET / HTTP/1.1" 200 18394
+INFO 2026-01-30 01:34:06,763 log "GET /static/css/banner-slider.css HTTP/1.1" 304 0
+WARNING 2026-01-30 01:34:06,768 log "GET /static/images/H2_614x212_308d97e5f4.webp HTTP/1.1" 404 1913
+WARNING 2026-01-30 01:34:06,777 log "GET /static/images/872375.png HTTP/1.1" 404 1865
+WARNING 2026-01-30 01:34:06,782 log "GET /static/images/H2_614x212_d46b00f4cd.jpg HTTP/1.1" 404 1910
+WARNING 2026-01-30 01:34:06,793 log "GET /static/images/572723.png HTTP/1.1" 404 1865
+INFO 2026-01-30 01:34:06,795 log "GET /static/js/banner-slider.js HTTP/1.1" 304 0
+WARNING 2026-01-30 01:34:06,802 log "GET /static/images/872375.png HTTP/1.1" 404 1865
+WARNING 2026-01-30 01:34:06,802 log "GET /static/images/H2_614x212_308d97e5f4.webp HTTP/1.1" 404 1913
+INFO 2026-01-30 01:34:08,695 log "GET / HTTP/1.1" 200 18394
+INFO 2026-01-30 01:34:08,705 log "GET /static/css/components.css HTTP/1.1" 200 49
+INFO 2026-01-30 01:34:08,708 log "GET /static/css/banner-slider.css HTTP/1.1" 200 650
+INFO 2026-01-30 01:34:08,712 log "GET /static/css/global.css HTTP/1.1" 200 1041
+WARNING 2026-01-30 01:34:08,713 log "GET /static/images/H2_614x212_308d97e5f4.webp HTTP/1.1" 404 1913
+WARNING 2026-01-30 01:34:08,718 log "GET /static/images/872375.png HTTP/1.1" 404 1865
+WARNING 2026-01-30 01:34:08,725 log "GET /static/images/H2_614x212_d46b00f4cd.jpg HTTP/1.1" 404 1910
+WARNING 2026-01-30 01:34:08,734 log "GET /static/images/572723.png HTTP/1.1" 404 1865
+INFO 2026-01-30 01:34:08,738 log "GET /static/js/global.js HTTP/1.1" 200 2934
+INFO 2026-01-30 01:34:08,748 log "GET /static/images/logos/Logooqhun22.gif HTTP/1.1" 200 2870137
+INFO 2026-01-30 01:34:08,798 log "GET /static/js/banner-slider.js HTTP/1.1" 200 5924
+WARNING 2026-01-30 01:34:08,942 log "GET /static/images/H2_614x212_308d97e5f4.webp HTTP/1.1" 404 1913
+WARNING 2026-01-30 01:34:08,943 log "GET /static/images/872375.png HTTP/1.1" 404 1865
+WARNING 2026-01-30 01:34:09,330 log Not Found: /favicon.ico
+WARNING 2026-01-30 01:34:09,331 log "GET /favicon.ico HTTP/1.1" 404 3683
+INFO 2026-01-30 01:34:51,433 log "GET / HTTP/1.1" 200 18394
+INFO 2026-01-30 01:34:51,447 log "GET /static/css/banner-slider.css HTTP/1.1" 304 0
+WARNING 2026-01-30 01:34:51,453 log "GET /static/images/H2_614x212_308d97e5f4.webp HTTP/1.1" 404 1913
+WARNING 2026-01-30 01:34:51,464 log "GET /static/images/872375.png HTTP/1.1" 404 1865
+WARNING 2026-01-30 01:34:51,469 log "GET /static/images/H2_614x212_d46b00f4cd.jpg HTTP/1.1" 404 1910
+INFO 2026-01-30 01:34:51,479 log "GET /static/js/banner-slider.js HTTP/1.1" 304 0
+WARNING 2026-01-30 01:34:51,479 log "GET /static/images/572723.png HTTP/1.1" 404 1865
+WARNING 2026-01-30 01:34:51,485 log "GET /static/images/H2_614x212_308d97e5f4.webp HTTP/1.1" 404 1913
+WARNING 2026-01-30 01:34:51,488 log "GET /static/images/872375.png HTTP/1.1" 404 1865
+INFO 2026-01-30 01:34:52,758 log "GET / HTTP/1.1" 200 18394
+INFO 2026-01-30 01:34:52,762 log "GET /static/css/components.css HTTP/1.1" 200 49
+INFO 2026-01-30 01:34:52,762 log "GET /static/css/global.css HTTP/1.1" 200 1041
+INFO 2026-01-30 01:34:52,776 log "GET /static/css/banner-slider.css HTTP/1.1" 200 650
+WARNING 2026-01-30 01:34:52,781 log "GET /static/images/H2_614x212_308d97e5f4.webp HTTP/1.1" 404 1913
+WARNING 2026-01-30 01:34:52,789 log "GET /static/images/872375.png HTTP/1.1" 404 1865
+WARNING 2026-01-30 01:34:52,796 log "GET /static/images/H2_614x212_d46b00f4cd.jpg HTTP/1.1" 404 1910
+WARNING 2026-01-30 01:34:52,801 log "GET /static/images/572723.png HTTP/1.1" 404 1865
+INFO 2026-01-30 01:34:52,804 log "GET /static/js/global.js HTTP/1.1" 200 2934
+INFO 2026-01-30 01:34:52,814 log "GET /static/images/logos/Logooqhun22.gif HTTP/1.1" 200 2870137
+INFO 2026-01-30 01:34:52,869 log "GET /static/js/banner-slider.js HTTP/1.1" 200 5924
+WARNING 2026-01-30 01:34:52,986 log "GET /static/images/H2_614x212_308d97e5f4.webp HTTP/1.1" 404 1913
+WARNING 2026-01-30 01:34:52,989 log "GET /static/images/872375.png HTTP/1.1" 404 1865
+WARNING 2026-01-30 01:34:53,397 log Not Found: /favicon.ico
+WARNING 2026-01-30 01:34:53,397 log "GET /favicon.ico HTTP/1.1" 404 3683
+INFO 2026-01-30 01:36:32,055 log "GET / HTTP/1.1" 200 18374
+INFO 2026-01-30 01:36:32,069 log "GET /static/css/global.css HTTP/1.1" 304 0
+INFO 2026-01-30 01:36:32,071 log "GET /static/css/components.css HTTP/1.1" 304 0
+INFO 2026-01-30 01:36:32,071 log "GET /static/css/banner-slider.css HTTP/1.1" 200 650
+INFO 2026-01-30 01:36:32,072 log "GET /static/images/banners/78253.webp HTTP/1.1" 200 41576
+INFO 2026-01-30 01:36:32,076 log "GET /static/images/banners/872375.png HTTP/1.1" 200 1062463
+WARNING 2026-01-30 01:36:32,089 log "GET /static/images/42321.jpg HTTP/1.1" 404 1862
+INFO 2026-01-30 01:36:32,093 log "GET /static/images/banners/572723.png HTTP/1.1" 200 621762
+INFO 2026-01-30 01:36:32,132 log "GET /static/js/global.js HTTP/1.1" 304 0
+INFO 2026-01-30 01:36:32,133 log "GET /static/js/banner-slider.js HTTP/1.1" 200 5924
+INFO 2026-01-30 01:36:32,231 log "GET /static/images/videos/appl.mp4 HTTP/1.1" 200 735232
+INFO 2026-01-30 01:36:32,236 log "GET /static/images/videos/sams.mp4 HTTP/1.1" 200 1585695
+INFO 2026-01-30 01:36:32,236 log "GET /static/images/videos/oppo.mp4 HTTP/1.1" 200 2140948
+INFO 2026-01-30 01:36:32,236 log "GET /static/images/videos/xiao.mp4 HTTP/1.1" 200 2438749
+INFO 2026-01-30 01:36:35,625 log "GET / HTTP/1.1" 200 18374
+INFO 2026-01-30 01:36:35,638 log "GET /static/css/banner-slider.css HTTP/1.1" 304 0
+INFO 2026-01-30 01:36:35,639 log "GET /static/images/banners/78253.webp HTTP/1.1" 200 41576
+INFO 2026-01-30 01:36:35,654 log "GET /static/images/banners/872375.png HTTP/1.1" 200 1062463
+WARNING 2026-01-30 01:36:35,662 log "GET /static/images/42321.jpg HTTP/1.1" 404 1862
+INFO 2026-01-30 01:36:35,672 log "GET /static/images/banners/572723.png HTTP/1.1" 200 621762
+INFO 2026-01-30 01:36:35,690 log "GET /static/js/banner-slider.js HTTP/1.1" 304 0
+INFO 2026-01-30 01:36:35,771 log "GET /static/images/videos/appl.mp4 HTTP/1.1" 200 735232
+INFO 2026-01-30 01:36:35,779 log "GET /static/images/videos/sams.mp4 HTTP/1.1" 200 1585695
+INFO 2026-01-30 01:36:35,816 log "GET /static/images/videos/oppo.mp4 HTTP/1.1" 200 2140948
+INFO 2026-01-30 01:36:35,836 log "GET /static/images/videos/xiao.mp4 HTTP/1.1" 200 2438749
+INFO 2026-01-30 01:37:15,849 log "GET / HTTP/1.1" 200 18374
+WARNING 2026-01-30 01:37:15,875 log "GET /static/images/42321.jpg HTTP/1.1" 404 1862
+INFO 2026-01-30 01:37:59,202 log "GET / HTTP/1.1" 200 18382
+INFO 2026-01-30 01:37:59,210 log "GET /static/css/banner-slider.css HTTP/1.1" 304 0
+INFO 2026-01-30 01:37:59,225 log "GET /static/images/banners/42321.jpg HTTP/1.1" 200 78188
+INFO 2026-01-30 01:37:59,231 log "GET /static/js/banner-slider.js HTTP/1.1" 304 0
+INFO 2026-01-30 01:42:19,352 log "GET / HTTP/1.1" 200 18382
+INFO 2026-01-30 01:42:19,357 log "GET /static/css/banner-slider.css HTTP/1.1" 304 0
+INFO 2026-01-30 01:42:19,381 log "GET /static/js/banner-slider.js HTTP/1.1" 304 0
+INFO 2026-01-30 01:53:01,211 autoreload D:\Py\Ozz\apps\accounts\urls.py changed, reloading.
+INFO 2026-01-30 01:53:01,365 autoreload D:\Py\Ozz\apps\accounts\urls.py changed, reloading.
+INFO 2026-01-30 01:53:01,721 autoreload D:\Py\Ozz\apps\accounts\urls.py changed, reloading.
+INFO 2026-01-30 01:53:01,801 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 01:53:01,860 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 01:53:02,142 autoreload D:\Py\Ozz\apps\accounts\urls.py changed, reloading.
+INFO 2026-01-30 01:53:02,310 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 01:53:02,652 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 01:56:59,126 autoreload D:\Py\Ozz\apps\accounts\views\auth.py changed, reloading.
+INFO 2026-01-30 01:56:59,335 autoreload D:\Py\Ozz\apps\accounts\views\auth.py changed, reloading.
+INFO 2026-01-30 01:56:59,386 autoreload D:\Py\Ozz\apps\accounts\views\auth.py changed, reloading.
+INFO 2026-01-30 01:56:59,569 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 01:56:59,806 autoreload D:\Py\Ozz\apps\accounts\views\auth.py changed, reloading.
+INFO 2026-01-30 01:56:59,811 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 01:56:59,884 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 01:57:00,220 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 01:57:11,354 autoreload D:\Py\Ozz\apps\accounts\views\__init__.py changed, reloading.
+INFO 2026-01-30 01:57:11,716 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 01:57:11,795 autoreload D:\Py\Ozz\apps\accounts\views\__init__.py changed, reloading.
+INFO 2026-01-30 01:57:11,960 autoreload D:\Py\Ozz\apps\accounts\views\__init__.py changed, reloading.
+INFO 2026-01-30 01:57:12,034 autoreload D:\Py\Ozz\apps\accounts\views\__init__.py changed, reloading.
+INFO 2026-01-30 01:57:12,166 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 01:57:12,314 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 01:57:12,377 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 01:57:27,387 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 01:57:28,426 autoreload D:\Py\Ozz\apps\accounts\urls.py changed, reloading.
+INFO 2026-01-30 01:57:28,533 autoreload D:\Py\Ozz\apps\accounts\views\auth.py changed, reloading.
+INFO 2026-01-30 01:57:28,579 autoreload D:\Py\Ozz\apps\accounts\views\auth.py changed, reloading.
+INFO 2026-01-30 01:57:28,647 autoreload D:\Py\Ozz\apps\accounts\views\auth.py changed, reloading.
+INFO 2026-01-30 01:57:28,843 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 01:57:28,962 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 01:57:28,995 autoreload D:\Py\Ozz\apps\accounts\views\__init__.py changed, reloading.
+INFO 2026-01-30 01:57:29,014 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 01:57:29,097 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 01:57:29,370 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:00:44,597 log "GET / HTTP/1.1" 200 18491
+INFO 2026-01-30 02:00:44,622 log "GET /static/css/global.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:00:44,622 log "GET /static/css/components.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:00:44,623 log "GET /static/css/banner-slider.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:00:44,631 log "GET /static/js/global.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:00:44,637 log "GET /static/js/banner-slider.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:00:44,724 log "GET /static/css/auth.css HTTP/1.1" 200 1373
+INFO 2026-01-30 02:00:44,745 log "GET /static/js/auth.js HTTP/1.1" 200 5098
+INFO 2026-01-30 02:00:45,842 log "GET /accounts/login/ HTTP/1.1" 200 15718
+INFO 2026-01-30 02:00:45,857 log "GET /static/css/auth.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:00:45,870 log "GET /static/js/auth.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:00:48,090 log "GET / HTTP/1.1" 200 18491
+INFO 2026-01-30 02:00:48,100 log "GET /static/css/auth.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:00:48,105 log "GET /static/js/auth.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:00:49,321 log "GET /accounts/login/ HTTP/1.1" 200 15718
+INFO 2026-01-30 02:00:50,378 log "GET /accounts/forgot-password/ HTTP/1.1" 200 14809
+INFO 2026-01-30 02:00:50,393 log "GET /static/css/auth.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:00:50,393 log "GET /static/js/auth.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:00:59,475 log "GET /accounts/forgot-password/ HTTP/1.1" 200 14809
+INFO 2026-01-30 02:00:59,487 log "GET /static/css/auth.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:00:59,490 log "GET /static/js/auth.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:01:08,854 log "POST /accounts/forgot-password/ HTTP/1.1" 200 14971
+INFO 2026-01-30 02:01:08,867 log "GET /static/css/auth.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:01:08,868 log "GET /static/js/auth.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:01:11,817 log "GET /accounts/login/ HTTP/1.1" 200 15718
+INFO 2026-01-30 02:01:11,827 log "GET /static/js/auth.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:01:11,827 log "GET /static/css/auth.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:01:13,035 log "GET /accounts/forgot-password/ HTTP/1.1" 200 14809
+INFO 2026-01-30 02:01:14,490 log "GET /accounts/login/ HTTP/1.1" 200 15718
+INFO 2026-01-30 02:01:18,491 log "GET /accounts/register/ HTTP/1.1" 200 17873
+INFO 2026-01-30 02:01:18,505 log "GET /static/css/auth.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:01:18,507 log "GET /static/js/auth.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:01:53,509 log "POST /accounts/register/ HTTP/1.1" 200 18011
+INFO 2026-01-30 02:01:53,519 log "GET /static/css/auth.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:01:53,527 log "GET /static/js/auth.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:02:15,741 log "POST /accounts/register/ HTTP/1.1" 200 18011
+INFO 2026-01-30 02:02:15,752 log "GET /static/css/auth.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:02:15,761 log "GET /static/js/auth.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:03:02,542 log "POST /accounts/register/ HTTP/1.1" 200 18011
+INFO 2026-01-30 02:03:02,554 log "GET /static/css/auth.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:03:02,563 log "GET /static/js/auth.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:04:43,893 autoreload D:\Py\Ozz\apps\accounts\views\auth.py changed, reloading.
+INFO 2026-01-30 02:04:43,893 autoreload D:\Py\Ozz\apps\accounts\views\auth.py changed, reloading.
+INFO 2026-01-30 02:04:43,919 autoreload D:\Py\Ozz\apps\accounts\views\auth.py changed, reloading.
+INFO 2026-01-30 02:04:44,001 autoreload D:\Py\Ozz\apps\accounts\views\auth.py changed, reloading.
+INFO 2026-01-30 02:04:44,168 autoreload D:\Py\Ozz\apps\accounts\views\auth.py changed, reloading.
+INFO 2026-01-30 02:04:44,711 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:04:44,711 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:04:44,745 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:04:44,796 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:04:44,940 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:05:36,600 log "GET /accounts/register/ HTTP/1.1" 200 17912
+INFO 2026-01-30 02:05:36,637 log "GET /static/css/global.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:05:36,640 log "GET /static/css/banner-slider.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:05:36,641 log "GET /static/css/components.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:05:36,690 log "GET /static/css/auth.css HTTP/1.1" 200 1607
+INFO 2026-01-30 02:05:36,690 log "GET /static/js/global.js HTTP/1.1" 200 3013
+INFO 2026-01-30 02:05:36,717 log "GET /static/js/banner-slider.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:05:36,718 log "GET /static/js/auth.js HTTP/1.1" 200 5713
+INFO 2026-01-30 02:05:43,558 log "POST /accounts/register/ HTTP/1.1" 200 18432
+INFO 2026-01-30 02:05:43,573 log "GET /static/css/banner-slider.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:05:43,574 log "GET /static/css/auth.css HTTP/1.1" 200 1607
+INFO 2026-01-30 02:05:43,584 log "GET /static/js/banner-slider.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:05:43,586 log "GET /static/js/auth.js HTTP/1.1" 200 5713
+INFO 2026-01-30 02:05:52,237 log "POST /accounts/register/ HTTP/1.1" 302 0
+INFO 2026-01-30 02:05:52,245 log "GET / HTTP/1.1" 200 19222
+INFO 2026-01-30 02:05:52,275 log "GET /static/js/auth.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:05:55,620 autoreload D:\Py\Ozz\apps\accounts\views\auth.py changed, reloading.
+INFO 2026-01-30 02:05:55,685 autoreload D:\Py\Ozz\apps\accounts\views\auth.py changed, reloading.
+INFO 2026-01-30 02:05:55,691 autoreload D:\Py\Ozz\apps\accounts\views\auth.py changed, reloading.
+INFO 2026-01-30 02:05:55,725 autoreload D:\Py\Ozz\apps\accounts\views\auth.py changed, reloading.
+INFO 2026-01-30 02:05:55,793 autoreload D:\Py\Ozz\apps\accounts\views\auth.py changed, reloading.
+INFO 2026-01-30 02:05:56,376 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:05:56,456 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:05:56,480 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:05:56,505 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:05:56,588 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:05:58,326 log "GET /accounts/profile/ HTTP/1.1" 200 11902
+INFO 2026-01-30 02:05:58,421 log "GET /static/css/auth.css HTTP/1.1" 200 1607
+INFO 2026-01-30 02:05:58,427 log "GET /static/js/auth.js HTTP/1.1" 200 5713
+INFO 2026-01-30 02:06:00,533 log "GET / HTTP/1.1" 200 18705
+INFO 2026-01-30 02:06:00,552 log "GET /static/css/auth.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:06:00,553 log "GET /static/js/auth.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:06:01,603 log "GET /accounts/profile/ HTTP/1.1" 200 11902
+INFO 2026-01-30 02:06:01,615 log "GET /static/css/auth.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:06:01,616 log "GET /static/js/auth.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:06:03,027 log "GET / HTTP/1.1" 200 18705
+INFO 2026-01-30 02:06:03,039 log "GET /static/css/auth.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:06:03,041 log "GET /static/js/auth.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:09:28,255 log "GET /accounts/profile/ HTTP/1.1" 200 11902
+INFO 2026-01-30 02:09:28,268 log "GET /static/css/banner-slider.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:09:28,268 log "GET /static/css/auth.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:09:28,285 log "GET /static/js/banner-slider.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:09:28,285 log "GET /static/js/auth.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:09:29,974 log "GET / HTTP/1.1" 200 18705
+INFO 2026-01-30 02:09:30,731 log "GET /cart/ HTTP/1.1" 200 11906
+INFO 2026-01-30 02:09:31,634 log "GET / HTTP/1.1" 200 18705
+INFO 2026-01-30 02:09:32,690 log "GET /cart/ HTTP/1.1" 200 11906
+INFO 2026-01-30 02:09:33,587 log "GET / HTTP/1.1" 200 18705
+INFO 2026-01-30 02:09:34,467 log "GET /cart/ HTTP/1.1" 200 11906
+INFO 2026-01-30 02:09:35,499 log "GET / HTTP/1.1" 200 18705
+INFO 2026-01-30 02:09:36,354 log "GET /accounts/profile/ HTTP/1.1" 200 11902
+INFO 2026-01-30 02:09:37,565 log "GET / HTTP/1.1" 200 18705
+INFO 2026-01-30 02:09:41,891 log "GET / HTTP/1.1" 200 18705
+INFO 2026-01-30 02:09:43,857 log "GET /cart/ HTTP/1.1" 200 11906
+INFO 2026-01-30 02:09:45,231 log "GET / HTTP/1.1" 200 18705
+INFO 2026-01-30 02:09:46,233 log "GET /accounts/profile/ HTTP/1.1" 200 11902
+INFO 2026-01-30 02:09:48,704 log "GET / HTTP/1.1" 200 18705
+INFO 2026-01-30 02:09:50,352 log "GET /cart/ HTTP/1.1" 200 11906
+INFO 2026-01-30 02:09:50,371 log "GET /static/css/auth.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:09:50,373 log "GET /static/js/auth.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:09:52,097 log "GET /cart/ HTTP/1.1" 200 11906
+INFO 2026-01-30 02:09:53,967 log "GET /accounts/profile/ HTTP/1.1" 200 11902
+INFO 2026-01-30 02:10:06,746 autoreload D:\Py\Ozz\apps\accounts\views\auth.py changed, reloading.
+INFO 2026-01-30 02:10:06,764 autoreload D:\Py\Ozz\apps\accounts\views\auth.py changed, reloading.
+INFO 2026-01-30 02:10:06,861 autoreload D:\Py\Ozz\apps\accounts\views\auth.py changed, reloading.
+INFO 2026-01-30 02:10:06,861 autoreload D:\Py\Ozz\apps\accounts\views\auth.py changed, reloading.
+INFO 2026-01-30 02:10:06,863 autoreload D:\Py\Ozz\apps\accounts\views\auth.py changed, reloading.
+INFO 2026-01-30 02:10:07,415 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:10:07,433 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:10:07,502 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:10:07,514 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:10:07,523 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:10:40,728 log "GET /accounts/profile/ HTTP/1.1" 302 0
+INFO 2026-01-30 02:10:40,737 log "GET /accounts/login/?next=/accounts/profile/ HTTP/1.1" 200 15891
+INFO 2026-01-30 02:10:40,745 log "GET /static/css/banner-slider.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:10:40,798 log "GET /static/js/banner-slider.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:10:40,824 log "GET /static/css/auth.css HTTP/1.1" 200 1607
+INFO 2026-01-30 02:10:40,826 log "GET /static/js/global.js HTTP/1.1" 200 3013
+INFO 2026-01-30 02:10:40,827 log "GET /static/css/profile/profile.css HTTP/1.1" 200 1111
+INFO 2026-01-30 02:10:40,859 log "GET /static/js/profile/profile.js HTTP/1.1" 200 2622
+INFO 2026-01-30 02:10:40,861 log "GET /static/js/auth.js HTTP/1.1" 200 5713
+INFO 2026-01-30 02:10:54,949 log "GET / HTTP/1.1" 200 18836
+INFO 2026-01-30 02:10:54,964 log "GET /static/css/auth.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:10:54,964 log "GET /static/css/profile/profile.css HTTP/1.1" 200 1111
+INFO 2026-01-30 02:10:54,980 log "GET /static/js/auth.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:10:54,985 log "GET /static/js/profile/profile.js HTTP/1.1" 200 2622
+INFO 2026-01-30 02:10:55,622 log "GET / HTTP/1.1" 200 18836
+INFO 2026-01-30 02:10:57,113 log "GET /accounts/profile/ HTTP/1.1" 200 19930
+INFO 2026-01-30 02:10:59,048 autoreload D:\Py\Ozz\apps\accounts\views\auth.py changed, reloading.
+INFO 2026-01-30 02:10:59,118 autoreload D:\Py\Ozz\apps\accounts\views\auth.py changed, reloading.
+INFO 2026-01-30 02:10:59,156 autoreload D:\Py\Ozz\apps\accounts\views\auth.py changed, reloading.
+INFO 2026-01-30 02:10:59,156 autoreload D:\Py\Ozz\apps\accounts\views\auth.py changed, reloading.
+INFO 2026-01-30 02:10:59,159 autoreload D:\Py\Ozz\apps\accounts\views\auth.py changed, reloading.
+INFO 2026-01-30 02:10:59,648 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:10:59,748 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:10:59,798 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:10:59,811 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:10:59,818 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:11:17,238 log "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2026-01-30 02:11:17,249 log "GET / HTTP/1.1" 200 19145
+INFO 2026-01-30 02:11:17,333 log "GET /static/css/profile/profile.css HTTP/1.1" 200 1111
+INFO 2026-01-30 02:11:17,333 log "GET /static/js/profile/profile.js HTTP/1.1" 200 2622
+INFO 2026-01-30 02:11:21,995 log "GET /accounts/login/ HTTP/1.1" 200 15891
+INFO 2026-01-30 02:11:22,010 log "GET /static/css/profile/profile.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:11:22,010 log "GET /static/js/profile/profile.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:11:23,324 log "GET /accounts/forgot-password/ HTTP/1.1" 200 14982
+INFO 2026-01-30 02:11:35,685 log "POST /accounts/forgot-password/ HTTP/1.1" 200 15505
+INFO 2026-01-30 02:11:35,703 log "GET /static/css/profile/profile.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:11:35,703 log "GET /static/css/auth.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:11:35,712 log "GET /static/js/auth.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:11:35,712 log "GET /static/js/profile/profile.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:11:39,354 log "GET /accounts/login/ HTTP/1.1" 200 15891
+INFO 2026-01-30 02:11:39,363 log "GET /static/css/profile/profile.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:11:39,363 log "GET /static/js/profile/profile.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:11:43,987 log "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-01-30 02:11:43,994 log "GET / HTTP/1.1" 200 19328
+INFO 2026-01-30 02:11:44,009 log "GET /static/css/profile/profile.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:11:44,009 log "GET /static/js/profile/profile.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:11:48,782 log "GET /accounts/profile/ HTTP/1.1" 200 19930
+INFO 2026-01-30 02:11:48,798 log "GET /static/css/profile/profile.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:11:48,798 log "GET /static/js/profile/profile.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:11:58,269 log "POST /accounts/profile/ HTTP/1.1" 200 20428
+INFO 2026-01-30 02:11:58,287 log "GET /static/css/profile/profile.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:11:58,290 log "GET /static/js/profile/profile.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:12:04,431 log "GET / HTTP/1.1" 200 18664
+INFO 2026-01-30 02:12:04,445 log "GET /static/css/global.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:12:04,445 log "GET /static/css/components.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:12:04,446 log "GET /static/css/profile/profile.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:12:04,448 log "GET /static/js/profile/profile.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:12:04,448 log "GET /static/js/global.js HTTP/1.1" 200 3013
+INFO 2026-01-30 02:12:08,019 log "GET /accounts/login/ HTTP/1.1" 200 15891
+INFO 2026-01-30 02:12:09,308 log "GET / HTTP/1.1" 200 18664
+INFO 2026-01-30 02:12:09,322 log "GET /static/js/auth.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:12:09,322 log "GET /static/css/auth.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:12:10,593 log "GET /accounts/login/ HTTP/1.1" 200 15891
+INFO 2026-01-30 02:12:16,570 log "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-01-30 02:12:16,589 log "GET / HTTP/1.1" 200 19328
+INFO 2026-01-30 02:12:16,604 log "GET /static/css/profile/profile.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:12:16,604 log "GET /static/js/profile/profile.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:12:21,389 log "GET /accounts/profile/ HTTP/1.1" 200 19930
+INFO 2026-01-30 02:12:23,028 log "GET / HTTP/1.1" 200 18836
+INFO 2026-01-30 02:12:24,083 log "GET /accounts/profile/ HTTP/1.1" 200 19930
+INFO 2026-01-30 02:12:24,097 log "GET /static/css/profile/profile.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:12:24,097 log "GET /static/js/profile/profile.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:12:25,115 log "GET / HTTP/1.1" 200 18836
+INFO 2026-01-30 02:12:25,933 log "GET /cart/ HTTP/1.1" 200 12037
+INFO 2026-01-30 02:12:26,947 log "GET / HTTP/1.1" 200 18836
+ERROR 2026-01-30 02:12:28,713 log Internal Server Error: /orders/
+Traceback (most recent call last):
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\apps\orders\views\order.py", line 11, in order_list
+    return render(request, 'orders/order/list.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: orders/order/list.html
+ERROR 2026-01-30 02:12:28,714 log "GET /orders/ HTTP/1.1" 500 83798
+INFO 2026-01-30 02:12:31,213 log "GET /accounts/profile/ HTTP/1.1" 200 19930
+INFO 2026-01-30 02:12:33,008 log "GET /cart/ HTTP/1.1" 200 12037
+INFO 2026-01-30 02:12:33,043 log "GET /static/css/profile/profile.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:12:33,046 log "GET /static/js/profile/profile.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:12:42,350 log "GET /accounts/profile/ HTTP/1.1" 200 19930
+INFO 2026-01-30 02:12:42,368 log "GET /static/js/global.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:12:53,435 log "GET / HTTP/1.1" 200 18836
+INFO 2026-01-30 02:12:53,449 log "GET /static/css/auth.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:12:53,453 log "GET /static/js/auth.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:12:53,453 log "GET /static/js/profile/profile.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:12:53,453 log "GET /static/css/profile/profile.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:13:10,020 log "GET /cart/ HTTP/1.1" 200 12037
+INFO 2026-01-30 02:13:10,035 log "GET /static/css/profile/profile.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:13:10,035 log "GET /static/js/profile/profile.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:13:11,740 log "GET /accounts/profile/ HTTP/1.1" 200 19930
+INFO 2026-01-30 02:13:13,817 log "GET / HTTP/1.1" 200 18836
+INFO 2026-01-30 02:18:40,919 log "GET /accounts/profile/ HTTP/1.1" 200 19930
+INFO 2026-01-30 02:18:40,934 log "GET /static/css/auth.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:18:40,936 log "GET /static/css/banner-slider.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:18:40,937 log "GET /static/css/profile/profile.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:18:40,937 log "GET /static/js/global.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:18:40,946 log "GET /static/js/banner-slider.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:18:40,950 log "GET /static/js/auth.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:18:40,952 log "GET /static/js/profile/profile.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:18:45,107 log "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2026-01-30 02:18:45,110 log "GET / HTTP/1.1" 200 19145
+ERROR 2026-01-30 02:18:46,821 log Internal Server Error: /orders/
+Traceback (most recent call last):
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\apps\orders\views\order.py", line 11, in order_list
+    return render(request, 'orders/order/list.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: orders/order/list.html
+ERROR 2026-01-30 02:18:46,822 log "GET /orders/ HTTP/1.1" 500 83646
+INFO 2026-01-30 02:18:48,147 log "GET /cart/ HTTP/1.1" 200 11865
+INFO 2026-01-30 02:18:49,737 log "GET / HTTP/1.1" 200 18664
+INFO 2026-01-30 02:18:51,082 log "GET /accounts/login/ HTTP/1.1" 200 15891
+INFO 2026-01-30 02:18:53,435 log "GET /accounts/register/ HTTP/1.1" 200 18043
+INFO 2026-01-30 02:24:24,769 autoreload D:\Py\Ozz\config\urls.py changed, reloading.
+INFO 2026-01-30 02:24:25,187 autoreload D:\Py\Ozz\config\urls.py changed, reloading.
+INFO 2026-01-30 02:24:25,251 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:24:25,270 autoreload D:\Py\Ozz\config\urls.py changed, reloading.
+INFO 2026-01-30 02:24:25,348 autoreload D:\Py\Ozz\config\urls.py changed, reloading.
+INFO 2026-01-30 02:24:25,352 autoreload D:\Py\Ozz\config\urls.py changed, reloading.
+INFO 2026-01-30 02:24:25,797 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:24:25,900 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:24:25,963 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:24:25,980 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:25:37,863 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:28:04,382 autoreload D:\Py\Ozz\apps\admin_dashboard\urls.py changed, reloading.
+INFO 2026-01-30 02:28:04,459 autoreload D:\Py\Ozz\apps\admin_dashboard\urls.py changed, reloading.
+INFO 2026-01-30 02:28:04,552 autoreload D:\Py\Ozz\apps\admin_dashboard\urls.py changed, reloading.
+INFO 2026-01-30 02:28:04,562 autoreload D:\Py\Ozz\apps\admin_dashboard\urls.py changed, reloading.
+INFO 2026-01-30 02:28:04,834 autoreload D:\Py\Ozz\apps\admin_dashboard\urls.py changed, reloading.
+INFO 2026-01-30 02:28:04,927 autoreload D:\Py\Ozz\apps\admin_dashboard\urls.py changed, reloading.
+INFO 2026-01-30 02:28:05,060 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:28:05,120 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:28:05,207 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:28:05,213 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:28:05,392 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:28:05,448 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:28:42,813 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:29:34,706 autoreload D:\Py\Ozz\apps\admin_dashboard\urls.py changed, reloading.
+INFO 2026-01-30 02:29:34,755 autoreload D:\Py\Ozz\apps\admin_dashboard\urls.py changed, reloading.
+INFO 2026-01-30 02:29:34,843 autoreload D:\Py\Ozz\apps\admin_dashboard\urls.py changed, reloading.
+INFO 2026-01-30 02:29:34,845 autoreload D:\Py\Ozz\apps\admin_dashboard\urls.py changed, reloading.
+INFO 2026-01-30 02:29:35,004 autoreload D:\Py\Ozz\apps\admin_dashboard\urls.py changed, reloading.
+INFO 2026-01-30 02:29:35,036 autoreload D:\Py\Ozz\apps\admin_dashboard\urls.py changed, reloading.
+INFO 2026-01-30 02:29:35,183 autoreload D:\Py\Ozz\apps\admin_dashboard\urls.py changed, reloading.
+INFO 2026-01-30 02:29:35,247 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:29:35,317 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:29:35,455 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:29:35,462 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:29:35,588 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:29:35,629 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:29:35,748 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:29:37,126 log "GET / HTTP/1.1" 200 18795
+INFO 2026-01-30 02:29:37,145 log "GET /static/css/components.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:29:37,146 log "GET /static/css/global.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:29:37,148 log "GET /static/css/banner-slider.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:29:37,149 log "GET /static/css/auth.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:29:37,151 log "GET /static/css/profile/profile.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:29:37,158 log "GET /static/js/global.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:29:37,193 log "GET /static/js/auth.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:29:37,193 log "GET /static/js/profile/profile.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:29:37,229 log "GET /static/css/admin_dashboard.css HTTP/1.1" 200 1175
+INFO 2026-01-30 02:29:37,250 log "GET /static/js/banner-slider.js HTTP/1.1" 200 6048
+INFO 2026-01-30 02:29:37,269 log "GET /static/js/admin_dashboard.js HTTP/1.1" 200 321
+INFO 2026-01-30 02:29:38,707 log "GET /accounts/login/ HTTP/1.1" 200 16022
+INFO 2026-01-30 02:29:56,402 log "POST /accounts/login/ HTTP/1.1" 200 16541
+INFO 2026-01-30 02:29:56,412 log "GET /static/js/banner-slider.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:29:56,412 log "GET /static/css/admin_dashboard.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:29:56,418 log "GET /static/js/admin_dashboard.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:30:07,687 log "GET / HTTP/1.1" 200 18795
+INFO 2026-01-30 02:30:07,699 log "GET /static/css/global.css HTTP/1.1" 200 1041
+INFO 2026-01-30 02:30:07,701 log "GET /static/css/banner-slider.css HTTP/1.1" 200 650
+INFO 2026-01-30 02:30:07,702 log "GET /static/css/components.css HTTP/1.1" 200 49
+INFO 2026-01-30 02:30:07,703 log "GET /static/css/auth.css HTTP/1.1" 200 1607
+INFO 2026-01-30 02:30:07,705 log "GET /static/css/admin_dashboard.css HTTP/1.1" 200 1175
+INFO 2026-01-30 02:30:07,705 log "GET /static/css/profile/profile.css HTTP/1.1" 200 1111
+INFO 2026-01-30 02:30:07,717 log "GET /static/images/banners/78253.webp HTTP/1.1" 200 41576
+INFO 2026-01-30 02:30:07,729 log "GET /static/images/banners/872375.png HTTP/1.1" 200 1062463
+INFO 2026-01-30 02:30:07,729 log "GET /static/images/logos/Logooqhun22.gif HTTP/1.1" 200 2870137
+INFO 2026-01-30 02:30:07,741 log "GET /static/images/banners/42321.jpg HTTP/1.1" 200 78188
+INFO 2026-01-30 02:30:07,743 log "GET /static/js/global.js HTTP/1.1" 200 3013
+INFO 2026-01-30 02:30:07,747 log "GET /static/images/banners/572723.png HTTP/1.1" 200 621762
+INFO 2026-01-30 02:30:07,750 log "GET /static/js/banner-slider.js HTTP/1.1" 200 6048
+INFO 2026-01-30 02:30:07,754 log "GET /static/js/auth.js HTTP/1.1" 200 5713
+INFO 2026-01-30 02:30:07,756 log "GET /static/js/profile/profile.js HTTP/1.1" 200 2622
+INFO 2026-01-30 02:30:07,758 log "GET /static/js/admin_dashboard.js HTTP/1.1" 200 321
+INFO 2026-01-30 02:30:08,033 log "GET /static/images/videos/appl.mp4 HTTP/1.1" 200 735232
+INFO 2026-01-30 02:30:08,039 log "GET /static/images/videos/sams.mp4 HTTP/1.1" 200 1585695
+INFO 2026-01-30 02:30:08,051 log "GET /static/images/videos/oppo.mp4 HTTP/1.1" 200 2140948
+INFO 2026-01-30 02:30:08,064 log "GET /static/images/videos/xiao.mp4 HTTP/1.1" 200 2438749
+WARNING 2026-01-30 02:30:08,208 log Not Found: /favicon.ico
+WARNING 2026-01-30 02:30:08,209 log "GET /favicon.ico HTTP/1.1" 404 3832
+INFO 2026-01-30 02:30:09,351 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:30:10,670 log "GET /accounts/login/ HTTP/1.1" 200 16022
+INFO 2026-01-30 02:30:20,330 log "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-01-30 02:30:20,338 log "GET / HTTP/1.1" 200 19459
+INFO 2026-01-30 02:30:20,345 log "GET /static/css/admin_dashboard.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:30:20,345 log "GET /static/js/banner-slider.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:30:20,349 log "GET /static/js/admin_dashboard.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:30:25,200 log "GET / HTTP/1.1" 200 18795
+INFO 2026-01-30 02:30:25,276 log "GET /static/css/components.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:30:25,277 log "GET /static/css/global.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:30:25,310 log "GET /static/css/banner-slider.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:30:25,311 log "GET /static/css/auth.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:30:25,316 log "GET /static/css/profile/profile.css HTTP/1.1" 200 1111
+INFO 2026-01-30 02:30:25,316 log "GET /static/css/admin_dashboard.css HTTP/1.1" 200 1175
+INFO 2026-01-30 02:30:25,399 log "GET /static/images/banners/42321.jpg HTTP/1.1" 200 78188
+INFO 2026-01-30 02:30:25,518 log "GET /accounts/profile/ HTTP/1.1" 200 20164
+INFO 2026-01-30 02:30:25,576 log "GET /static/js/global.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:30:25,594 log "GET /static/js/banner-slider.js HTTP/1.1" 200 6048
+INFO 2026-01-30 02:30:25,634 log "GET /static/js/auth.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:30:25,658 log "GET /static/js/admin_dashboard.js HTTP/1.1" 200 321
+INFO 2026-01-30 02:30:25,672 log "GET /static/js/profile/profile.js HTTP/1.1" 200 2622
+INFO 2026-01-30 02:30:38,040 log "GET /admin/dashboard/ HTTP/1.1" 302 0
+INFO 2026-01-30 02:30:38,069 log "GET /admin/login/?next=/admin/dashboard/ HTTP/1.1" 200 4098
+INFO 2026-01-30 02:30:38,076 log "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:30:38,086 log "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:30:38,088 log "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:30:38,089 log "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:30:38,089 log "GET /static/admin/css/login.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:30:38,090 log "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:30:38,125 log "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:30:51,114 autoreload D:\Py\Ozz\apps\admin_dashboard\urls.py changed, reloading.
+INFO 2026-01-30 02:30:51,440 autoreload D:\Py\Ozz\apps\admin_dashboard\views.py changed, reloading.
+INFO 2026-01-30 02:30:51,474 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:30:51,562 autoreload D:\Py\Ozz\apps\admin_dashboard\views.py changed, reloading.
+INFO 2026-01-30 02:30:51,574 autoreload D:\Py\Ozz\apps\admin_dashboard\urls.py changed, reloading.
+INFO 2026-01-30 02:30:51,576 autoreload D:\Py\Ozz\apps\admin_dashboard\urls.py changed, reloading.
+INFO 2026-01-30 02:30:51,676 autoreload D:\Py\Ozz\apps\admin_dashboard\views.py changed, reloading.
+INFO 2026-01-30 02:30:51,717 autoreload D:\Py\Ozz\apps\admin_dashboard\views.py changed, reloading.
+INFO 2026-01-30 02:30:51,784 autoreload D:\Py\Ozz\apps\admin_dashboard\views.py changed, reloading.
+INFO 2026-01-30 02:30:52,072 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:30:52,233 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:30:52,273 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:30:52,294 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:30:52,370 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:30:52,401 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:30:52,452 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:31:32,954 log "GET /accounts/login/ HTTP/1.1" 200 16022
+INFO 2026-01-30 02:31:32,968 log "GET /static/css/admin_dashboard.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:31:32,979 log "GET /static/js/banner-slider.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:31:32,999 log "GET /static/js/admin_dashboard.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:31:46,288 log "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-01-30 02:31:46,308 log "GET / HTTP/1.1" 200 19459
+INFO 2026-01-30 02:31:46,322 log "GET /static/css/admin_dashboard.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:31:46,322 log "GET /static/css/profile/profile.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:31:46,331 log "GET /static/js/banner-slider.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:31:46,334 log "GET /static/js/profile/profile.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:31:46,336 log "GET /static/js/admin_dashboard.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:31:51,503 log "GET /accounts/profile/ HTTP/1.1" 200 21203
+INFO 2026-01-30 02:32:10,552 log "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-01-30 02:32:10,560 log "GET / HTTP/1.1" 200 19459
+INFO 2026-01-30 02:32:10,572 log "GET /static/css/admin_dashboard.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:32:10,589 log "GET /static/js/admin_dashboard.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:32:10,589 log "GET /static/js/banner-slider.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:32:19,254 log "GET / HTTP/1.1" 200 18967
+INFO 2026-01-30 02:32:30,779 log "GET /accounts/profile/ HTTP/1.1" 200 21203
+INFO 2026-01-30 02:32:30,795 log "GET /static/css/profile/profile.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:32:30,795 log "GET /static/js/profile/profile.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:32:42,501 log "GET /accounts/profile/ HTTP/1.1" 200 21203
+INFO 2026-01-30 02:32:42,512 log "GET /static/css/admin_dashboard.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:32:42,512 log "GET /static/js/banner-slider.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:32:42,514 log "GET /static/js/admin_dashboard.js HTTP/1.1" 304 0
+WARNING 2026-01-30 02:32:57,297 log Not Found: /admin/dashboard/
+WARNING 2026-01-30 02:32:57,297 log "GET /admin/dashboard/ HTTP/1.1" 404 5438
+WARNING 2026-01-30 02:33:11,269 log Not Found: /admin/dashboard/
+WARNING 2026-01-30 02:33:11,270 log "GET /admin/dashboard/ HTTP/1.1" 404 5438
+INFO 2026-01-30 02:33:33,470 log "GET /accounts/profile/ HTTP/1.1" 200 21203
+INFO 2026-01-30 02:33:33,481 log "GET /static/css/admin_dashboard.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:33:33,483 log "GET /static/css/auth.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:33:33,484 log "GET /static/js/global.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:33:33,490 log "GET /static/js/banner-slider.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:33:33,492 log "GET /static/js/auth.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:33:33,494 log "GET /static/js/admin_dashboard.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:33:54,613 log "GET /accounts/profile/ HTTP/1.1" 200 21203
+INFO 2026-01-30 02:33:54,628 log "GET /static/css/profile/profile.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:33:54,642 log "GET /static/js/profile/profile.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:33:56,897 log "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2026-01-30 02:33:56,902 log "GET / HTTP/1.1" 200 19276
+INFO 2026-01-30 02:34:03,298 log "GET /accounts/login/ HTTP/1.1" 200 16022
+INFO 2026-01-30 02:34:14,681 log "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-01-30 02:34:14,690 log "GET / HTTP/1.1" 200 19459
+INFO 2026-01-30 02:34:14,708 log "GET /static/css/admin_dashboard.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:34:14,710 log "GET /static/js/banner-slider.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:34:14,710 log "GET /static/js/admin_dashboard.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:34:31,426 log "GET /accounts/profile/ HTTP/1.1" 200 21203
+WARNING 2026-01-30 02:34:34,434 log Not Found: /admin/dashboard/
+WARNING 2026-01-30 02:34:34,435 log "GET /admin/dashboard/ HTTP/1.1" 404 5438
+INFO 2026-01-30 02:34:58,920 autoreload D:\Py\Ozz\apps\accounts\admin.py changed, reloading.
+INFO 2026-01-30 02:34:58,924 autoreload D:\Py\Ozz\apps\orders\models\__init__.py changed, reloading.
+INFO 2026-01-30 02:34:59,095 autoreload D:\Py\Ozz\apps\promotions\urls.py changed, reloading.
+INFO 2026-01-30 02:34:59,605 autoreload D:\Py\Ozz\apps\core\__init__.py changed, reloading.
+INFO 2026-01-30 02:34:59,815 autoreload D:\Py\Ozz\apps\products\apps.py changed, reloading.
+INFO 2026-01-30 02:34:59,834 autoreload D:\Py\Ozz\config\base.py changed, reloading.
+INFO 2026-01-30 02:34:59,834 autoreload D:\Py\Ozz\apps\products\views\__init__.py changed, reloading.
+INFO 2026-01-30 02:34:59,907 autoreload D:\Py\Ozz\apps\payments\apps.py changed, reloading.
+INFO 2026-01-30 02:35:00,372 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:35:00,390 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:35:00,535 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:35:01,149 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:35:01,188 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:35:01,200 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:35:01,215 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:35:01,256 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:36:08,317 log "GET / HTTP/1.1" 200 18967
+INFO 2026-01-30 02:36:08,481 log "GET /static/css/admin_dashboard.css HTTP/1.1" 200 1175
+INFO 2026-01-30 02:36:08,486 log "GET /static/css/banner-slider.css HTTP/1.1" 200 650
+INFO 2026-01-30 02:36:08,502 log "GET /static/js/banner-slider.js HTTP/1.1" 200 5876
+INFO 2026-01-30 02:36:08,502 log "GET /static/js/admin_dashboard.js HTTP/1.1" 200 321
+INFO 2026-01-30 02:36:09,365 log "GET /accounts/profile/ HTTP/1.1" 200 21203
+INFO 2026-01-30 02:36:10,599 log "GET / HTTP/1.1" 200 18967
+INFO 2026-01-30 02:36:29,842 log "GET /accounts/profile/ HTTP/1.1" 200 21203
+INFO 2026-01-30 02:36:29,864 log "GET /static/css/banner-slider.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:36:29,871 log "GET /static/css/admin_dashboard.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:36:29,871 log "GET /static/js/global.js HTTP/1.1" 200 2913
+INFO 2026-01-30 02:36:29,872 log "GET /static/css/auth.css HTTP/1.1" 200 1528
+INFO 2026-01-30 02:36:29,877 log "GET /static/css/profile/profile.css HTTP/1.1" 200 1111
+INFO 2026-01-30 02:36:29,880 log "GET /static/js/banner-slider.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:36:29,881 log "GET /static/js/admin_dashboard.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:36:29,881 log "GET /static/js/profile/profile.js HTTP/1.1" 200 2622
+INFO 2026-01-30 02:36:29,881 log "GET /static/js/auth.js HTTP/1.1" 200 5570
+INFO 2026-01-30 02:36:34,466 log "GET / HTTP/1.1" 200 18967
+INFO 2026-01-30 02:36:36,297 log "GET /accounts/profile/ HTTP/1.1" 200 21203
+WARNING 2026-01-30 02:36:38,725 log Not Found: /admin/dashboard/
+WARNING 2026-01-30 02:36:38,725 log "GET /admin/dashboard/ HTTP/1.1" 404 5438
+INFO 2026-01-30 02:37:50,051 autoreload D:\Py\Ozz\config\urls.py changed, reloading.
+INFO 2026-01-30 02:37:50,096 autoreload D:\Py\Ozz\config\urls.py changed, reloading.
+INFO 2026-01-30 02:37:50,243 autoreload D:\Py\Ozz\config\urls.py changed, reloading.
+INFO 2026-01-30 02:37:50,246 autoreload D:\Py\Ozz\config\urls.py changed, reloading.
+INFO 2026-01-30 02:37:50,249 autoreload D:\Py\Ozz\config\urls.py changed, reloading.
+INFO 2026-01-30 02:37:50,322 autoreload D:\Py\Ozz\config\urls.py changed, reloading.
+INFO 2026-01-30 02:37:50,566 autoreload D:\Py\Ozz\config\urls.py changed, reloading.
+INFO 2026-01-30 02:37:50,566 autoreload D:\Py\Ozz\config\urls.py changed, reloading.
+INFO 2026-01-30 02:37:50,795 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:37:50,880 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:37:51,099 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:37:51,099 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:37:51,099 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:37:51,200 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:37:51,426 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:37:51,434 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:38:21,197 log "GET /accounts/profile/ HTTP/1.1" 200 21235
+INFO 2026-01-30 02:38:21,224 log "GET /static/css/auth.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:38:21,224 log "GET /static/css/banner-slider.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:38:21,228 log "GET /static/css/profile/profile.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:38:21,228 log "GET /static/css/admin_dashboard.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:38:21,229 log "GET /static/js/global.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:38:21,238 log "GET /static/js/banner-slider.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:38:21,241 log "GET /static/js/auth.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:38:21,245 log "GET /static/js/profile/profile.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:38:21,247 log "GET /static/js/admin_dashboard.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:38:22,645 log "GET /accounts/profile/ HTTP/1.1" 200 21235
+INFO 2026-01-30 02:38:45,395 log "GET /accounts/profile/ HTTP/1.1" 200 22756
+INFO 2026-01-30 02:38:45,410 log "GET /static/css/profile/profile.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:38:45,410 log "GET /static/css/auth.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:38:45,412 log "GET /static/css/admin_dashboard.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:38:45,412 log "GET /static/js/global.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:38:45,413 log "GET /static/css/banner-slider.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:38:45,422 log "GET /static/js/banner-slider.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:38:45,425 log "GET /static/js/auth.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:38:45,427 log "GET /static/js/profile/profile.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:38:45,430 log "GET /static/js/admin_dashboard.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:38:54,283 log "GET / HTTP/1.1" 200 18967
+INFO 2026-01-30 02:38:55,068 log "GET /accounts/profile/ HTTP/1.1" 200 22779
+INFO 2026-01-30 02:38:57,466 log "GET / HTTP/1.1" 200 18967
+INFO 2026-01-30 02:38:58,410 log "GET /accounts/profile/ HTTP/1.1" 200 22779
+INFO 2026-01-30 02:39:18,056 log "GET / HTTP/1.1" 200 18967
+INFO 2026-01-30 02:39:18,073 log "GET /static/css/banner-slider.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:39:18,079 log "GET /static/css/profile/profile.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:39:18,079 log "GET /static/css/admin_dashboard.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:39:18,081 log "GET /static/css/auth.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:39:18,081 log "GET /static/js/global.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:39:18,081 log "GET /static/js/auth.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:39:18,081 log "GET /static/js/banner-slider.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:39:18,082 log "GET /static/js/admin_dashboard.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:39:18,082 log "GET /static/js/profile/profile.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:39:23,922 log "GET /accounts/profile/ HTTP/1.1" 200 22779
+INFO 2026-01-30 02:39:28,690 log "GET / HTTP/1.1" 200 18967
+INFO 2026-01-30 02:39:29,536 log "GET /accounts/profile/ HTTP/1.1" 200 22779
+INFO 2026-01-30 02:39:32,441 log "GET / HTTP/1.1" 200 18967
+INFO 2026-01-30 02:39:34,056 log "GET /accounts/profile/ HTTP/1.1" 200 22779
+INFO 2026-01-30 02:39:37,394 log "GET / HTTP/1.1" 200 18967
+INFO 2026-01-30 02:39:39,308 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:39:52,705 log "GET /accounts/profile/ HTTP/1.1" 200 22779
+ERROR 2026-01-30 02:39:52,726 log Internal Server Error: /quan-tri/dashboard/
+Traceback (most recent call last):
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\apps\admin_dashboard\views.py", line 53, in dashboard_view
+    return render(request, 'admin_dashboard/dashboard.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Py\Ozz\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: admin_dashboard/dashboard.html
+INFO 2026-01-30 02:39:52,740 log "GET /static/js/global.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:39:52,741 log "GET /static/css/profile/profile.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:39:52,741 log "GET /static/js/banner-slider.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:39:52,741 log "GET /static/css/auth.css HTTP/1.1" 304 0
+ERROR 2026-01-30 02:39:52,742 log "GET /quan-tri/dashboard/ HTTP/1.1" 500 90181
+INFO 2026-01-30 02:39:52,742 log "GET /static/css/banner-slider.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:39:52,742 log "GET /static/css/admin_dashboard.css HTTP/1.1" 304 0
+INFO 2026-01-30 02:39:52,746 log "GET /static/js/admin_dashboard.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:39:52,747 log "GET /static/js/auth.js HTTP/1.1" 304 0
+INFO 2026-01-30 02:39:52,865 log "GET /static/js/profile/profile.js HTTP/1.1" 200 6820
+INFO 2026-01-30 02:39:58,064 log "GET / HTTP/1.1" 200 18967
+INFO 2026-01-30 02:39:58,087 log "GET /static/js/profile/profile.js HTTP/1.1" 304 0
+WARNING 2026-01-30 02:40:06,519 log Not Found: /admin/dashboard/
+WARNING 2026-01-30 02:40:06,519 log "GET /admin/dashboard/ HTTP/1.1" 404 5438
+INFO 2026-01-30 02:40:27,837 autoreload D:\Py\Ozz\config\urls.py changed, reloading.
+INFO 2026-01-30 02:40:27,937 autoreload D:\Py\Ozz\config\urls.py changed, reloading.
+INFO 2026-01-30 02:40:28,011 autoreload D:\Py\Ozz\config\urls.py changed, reloading.
+INFO 2026-01-30 02:40:28,119 autoreload D:\Py\Ozz\config\urls.py changed, reloading.
+INFO 2026-01-30 02:40:28,119 autoreload D:\Py\Ozz\config\urls.py changed, reloading.
+INFO 2026-01-30 02:40:28,119 autoreload D:\Py\Ozz\config\urls.py changed, reloading.
+INFO 2026-01-30 02:40:28,270 autoreload D:\Py\Ozz\config\urls.py changed, reloading.
+INFO 2026-01-30 02:40:28,285 autoreload D:\Py\Ozz\config\urls.py changed, reloading.
+INFO 2026-01-30 02:40:28,386 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:40:28,469 autoreload D:\Py\Ozz\config\urls.py changed, reloading.
+INFO 2026-01-30 02:40:28,497 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:40:28,628 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:40:28,817 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:40:28,820 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:40:28,820 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:40:28,997 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:40:29,016 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:40:29,155 autoreload Watching for file changes with StatReloader
+INFO 2026-01-30 02:40:30,137 autoreload D:\Py\Ozz\config\base.py changed, reloading.
+INFO 2026-01-30 02:40:30,139 autoreload D:\Py\Ozz\config\base.py changed, reloading.
+INFO 2026-01-30 02:40:30,139 autoreload D:\Py\Ozz\config\base.py changed, reloading.
+INFO 2026-01-30 02:40:30,271 autoreload D:\Py\Ozz\config\base.py changed, reloading.
+INFO 2026-01-30 02:40:30,293 autoreload D:\Py\Ozz\config\base.py changed, reloading.
+INFO 2026-01-30 02:40:30,387 autoreload D:\Py\Ozz\config\base.py changed, reloading.
+INFO 2026-01-30 02:40:30,692 autoreload D:\Py\Ozz\config\base.py changed, reloading.
+INFO 2026-01-30 02:40:30,797 autoreload D:\Py\Ozz\config\urls.py changed, reloading.
+INFO 2026-01-30 02:40:30,906 autoreload D:\Py\Ozz\config\base.py changed, reloading.

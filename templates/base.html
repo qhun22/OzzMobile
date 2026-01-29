@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="QHUN22 Mobile - Cửa hàng điện thoại di động uy tín">
+    <title>{% block title %}QHUN22 Mobile{% endblock %}</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#64748b',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/global.css' %}">
+    <link rel="stylesheet" href="{% static 'css/components.css' %}">
+    <link rel="stylesheet" href="{% static 'css/banner-slider.css' %}">
+    <link rel="stylesheet" href="{% static 'css/auth.css' %}">
+    <link rel="stylesheet" href="{% static 'css/profile/profile.css' %}">
+    <link rel="stylesheet" href="{% static 'css/admin_dashboard.css' %}">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Page-specific CSS -->
+    {% block extra_css %}{% endblock %}
+</head>
+<body class="flex flex-col min-h-screen">
+    <!-- Header -->
+    {% include 'partials/header.html' %}
+    
+    <!-- Main content -->
+    <main class="flex-grow">
+        {% block content %}{% endblock %}
+    </main>
+    
+    <!-- Footer -->
+    {% include 'partials/footer.html' %}
+    
+    <!-- Global JS -->
+    <script src="{% static 'js/global.js' %}"></script>
+    <script src="{% static 'js/banner-slider.js' %}" defer></script>
+    <script src="{% static 'js/auth.js' %}" defer></script>
+    <script src="{% static 'js/profile/profile.js' %}" defer></script>
+    <script src="{% static 'js/admin_dashboard.js' %}" defer></script>
+    <!-- Page-specific JS -->
+    {% block extra_js %}{% endblock %}
+    
+    <!-- Toast container -->
+    <div id="toast-container" class="fixed top-4 right-4 z-50 flex flex-col gap-3"></div>
+    
+    <!-- Flash messages - Convert to data attributes for JS handling -->
+    {% if messages %}
+    <script>
+        {% for message in messages %}
+        (function() {
+            const container = document.getElementById('toast-container') || Toast.createContainer();
+            const toast = document.createElement('div');
+            {% if message.tags == 'success' %}
+            toast.className = 'toast toast-success';
+            {% elif message.tags == 'error' %}
+            toast.className = 'toast toast-error';
+            {% elif message.tags == 'warning' %}
+            toast.className = 'toast toast-warning';
+            {% else %}
+            toast.className = 'toast toast-info';
+            {% endif %}
+            toast.textContent = '{{ message|escapejs }}';
+            container.appendChild(toast);
+            
+            setTimeout(() => toast.remove(), 4000);
+        })();
+        {% endfor %}
+    </script>
+    {% endif %}
+</body>
+</html>
