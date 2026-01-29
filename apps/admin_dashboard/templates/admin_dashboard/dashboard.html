@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Bảng điều khiển - QHUN22 Mobile{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/admin_dashboard.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="admin-container max-w-6xl mx-auto px-4 py-8">
+    <!-- Page Header -->
+    <div class="mb-8">
+        <h1 class="text-3xl font-bold text-gray-800">Bảng điều khiển</h1>
+        <p class="text-gray-600 mt-1">Quản lý và theo dõi hệ thống</p>
+    </div>
+    
+    <!-- Main Content Grid -->
+    <div class="admin-grid flex flex-col lg:flex-row gap-8">
+        <!-- Left Column: Sidebar -->
+        <div class="admin-sidebar w-full lg:w-64 flex-shrink-0">
+            {% include 'admin_dashboard/sidebar.html' %}
+        </div>
+        
+        <!-- Right Column: Main Content -->
+        <div class="admin-content flex-1">
+            <!-- Dashboard Section -->
+            <div class="dashboard-section bg-white rounded-2xl shadow-lg p-6 lg:p-8">
+                <div class="section-header mb-6">
+                    <h2 class="text-xl font-bold text-gray-800">Tổng quan</h2>
+                    <p class="text-gray-500 text-sm mt-1">Thống kê hệ thống</p>
+                </div>
+                
+                <!-- Statistics Cards -->
+                <div class="stats-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+                    <!-- Card 1: Tổng số thành viên -->
+                    <div class="stat-card bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl p-5 text-white">
+                        <div class="stat-icon mb-3">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                                      d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+                            </svg>
+                        </div>
+                        <div class="stat-value text-3xl font-bold">{{ total_members }}</div>
+                        <div class="stat-label text-blue-100 text-sm">Tổng số thành viên</div>
+                    </div>
+                    
+                    <!-- Card 2: Thành viên mới hôm nay -->
+                    <div class="stat-card bg-gradient-to-br from-green-500 to-green-700 rounded-xl p-5 text-white">
+                        <div class="stat-icon mb-3">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                                      d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"/>
+                            </svg>
+                        </div>
+                        <div class="stat-value text-3xl font-bold">{{ new_members_today }}</div>
+                        <div class="stat-label text-green-100 text-sm">Thành viên mới hôm nay</div>
+                    </div>
+                    
+                    <!-- Card 3: Tổng số sản phẩm -->
+                    <div class="stat-card bg-gradient-to-br from-purple-500 to-purple-700 rounded-xl p-5 text-white">
+                        <div class="stat-icon mb-3">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                                      d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+                            </svg>
+                        </div>
+                        <div class="stat-value text-3xl font-bold">{{ total_products }}</div>
+                        <div class="stat-label text-purple-100 text-sm">Tổng số sản phẩm</div>
+                    </div>
+                    
+                    <!-- Card 4: Tổng số đơn hàng -->
+                    <div class="stat-card bg-gradient-to-br from-orange-500 to-orange-700 rounded-xl p-5 text-white">
+                        <div class="stat-icon mb-3">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                                      d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+                            </svg>
+                        </div>
+                        <div class="stat-value text-3xl font-bold">{{ total_orders }}</div>
+                        <div class="stat-label text-orange-100 text-sm">Tổng số đơn hàng</div>
+                    </div>
+                </div>
+                
+                <!-- Note for future development -->
+                <div class="future-note bg-gray-50 rounded-lg p-4 mt-6">
+                    <p class="text-gray-600 text-sm">
+                        <i class="fas fa-info-circle mr-2 text-blue-500"></i>
+                        Các tính năng quản lý khác (sản phẩm, đơn hàng, thành viên) sẽ được phát triển trong các bước tiếp theo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
