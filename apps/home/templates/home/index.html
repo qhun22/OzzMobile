@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}QHUN22 Mobile{% endblock %}
+{% block content %}
+<!-- ==================== BANNER CHÍNH (Slider) ==================== -->
+<section class="max-w-7xl mx-auto px-4 py-6">
+    <div class="relative rounded-2xl overflow-hidden shadow-xl">
+        <!-- Slider Container -->
+        <div class="relative h-[400px] bg-gray-900" id="mainSlider">
+            <!-- Slide 1 - IPHONE -->
+            <div class="banner-slide absolute inset-0 opacity-100 transition-opacity duration-700 ease-in-out" data-slide="0">
+                <video class="w-full h-full object-cover transition-transform duration-700" autoplay muted loop playsinline>
+                    <source src="{% static 'images/videos/appl.mp4' %}" type="video/mp4">
+                </video>
+                <div class="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent flex items-center">
+                    <div class="pl-12">
+                        <h2 class="text-4xl font-bold text-white mb-2">IPHONE</h2>
+                        <p class="text-gray-200 text-lg mb-4">Trải nghiệm công nghệ vượt trội</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 2 - SAMSUNG -->
+            <div class="banner-slide absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out" data-slide="1">
+                <video src="{% static 'images/videos/sams.mp4' %}" class="w-full h-full object-cover transition-transform duration-700" autoplay muted
+                    loop playsinline>
+                </video>
+                <div class="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent flex items-center">
+                    <div class="pl-12">
+                        <h2 class="text-4xl font-bold text-white mb-2">SAMSUNG</h2>
+                        <p class="text-gray-200 text-lg mb-4">Camera siêu zoom 100x</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 3 - XIAOMI -->
+            <div class="banner-slide absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out" data-slide="2">
+                <video class="w-full h-full object-cover transition-transform duration-700" autoplay muted loop playsinline>
+                    <source src="{% static 'images/videos/xiao.mp4' %}" type="video/mp4">
+                </video>
+                <div class="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent flex items-center">
+                    <div class="pl-12">
+                        <h2 class="text-4xl font-bold text-white mb-2">XIAOMI</h2>
+                        <p class="text-gray-200 text-lg mb-4">Snapdragon 8 Elite – Hiệu năng vượt xa</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 4 - OPPO -->
+            <div class="banner-slide absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out" data-slide="3">
+                <video class="w-full h-full object-cover transition-transform duration-700" autoplay muted loop playsinline>
+                    <source src="{% static 'images/videos/oppo.mp4' %}" type="video/mp4">
+                </video>
+                <div class="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent flex items-center">
+                    <div class="pl-12">
+                        <h2 class="text-4xl font-bold text-white mb-2">OPPO</h2>
+                        <p class="text-gray-200 text-lg mb-4">Hệ thống camera Hasselblad</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Nút chuyển trái -->
+        <button id="prevBtn" class="absolute left-2 top-1/2 -translate-y-1/2 w-9 h-9 bg-white/90 hover:bg-white text-gray-700 text-lg rounded-full flex items-center justify-center shadow-md transition hover:scale-105 z-10">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <!-- Nút chuyển phải -->
+        <button id="nextBtn" class="absolute right-2 top-1/2 -translate-y-1/2 w-9 h-9 bg-white/90 hover:bg-white text-gray-700 text-lg rounded-full flex items-center justify-center shadow-md transition hover:scale-105 z-10">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        <!-- Indicator (Dots) -->
+        <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2" id="dotsContainer">
+            <button class="w-3 h-3 rounded-full bg-white/90 hover:bg-white transition-all duration-300 dot-btn active" data-slide="0"></button>
+            <button class="w-3 h-3 rounded-full bg-white/40 hover:bg-white transition-all duration-300 dot-btn" data-slide="1"></button>
+            <button class="w-3 h-3 rounded-full bg-white/40 hover:bg-white transition-all duration-300 dot-btn" data-slide="2"></button>
+            <button class="w-3 h-3 rounded-full bg-white/40 hover:bg-white transition-all duration-300 dot-btn" data-slide="3"></button>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== BANNER PHỤ (Auto Slider) ==================== -->
+<section class="max-w-7xl mx-auto px-4 pb-8">
+    <div class="auto-slider-container rounded-2xl shadow-lg overflow-hidden">
+        <div class="auto-slider-track flex transition-transform duration-500 ease-in-out" id="autoSliderTrack">
+            <!-- Banner 1 -->
+            <div class="auto-slider-item flex-shrink-0 w-1/2">
+                <a href="#" class="block">
+                    <img src="{% static 'images/banners/78253.webp' %}" alt="Banner 1" class="w-full h-[200px] object-cover">
+                </a>
+            </div>
+            <!-- Banner 2 -->
+            <div class="auto-slider-item flex-shrink-0 w-1/2">
+                <a href="#" class="block">
+                    <img src="{% static 'images/banners/872375.png' %}" alt="Banner 2" class="w-full h-[200px] object-cover">
+                </a>
+            </div>
+            <!-- Banner 3 -->
+            <div class="auto-slider-item flex-shrink-0 w-1/2">
+                <a href="#" class="block">
+                    <img src="{% static 'images/banners/42321.jpg' %}" alt="Banner 3" class="w-full h-[200px] object-cover">
+                </a>
+            </div>
+            <!-- Banner 4 -->
+            <div class="auto-slider-item flex-shrink-0 w-1/2">
+                <a href="#" class="block">
+                    <img src="{% static 'images/banners/572723.png' %}" alt="Banner 4" class="w-full h-[200px] object-cover">
+                </a>
+            </div>
+            <!-- Clone Banner 1 và 2 để loop mượt -->
+            <div class="auto-slider-item flex-shrink-0 w-1/2">
+                <a href="#" class="block">
+                    <img src="{% static 'images/banners/78253.webp' %}" alt="Banner 1 Clone" class="w-full h-[200px] object-cover">
+                </a>
+            </div>
+            <div class="auto-slider-item flex-shrink-0 w-1/2">
+                <a href="#" class="block">
+                    <img src="{% static 'images/banners/872375.png' %}" alt="Banner 2 Clone" class="w-full h-[200px] object-cover">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
